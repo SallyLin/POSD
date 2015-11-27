@@ -1,0 +1,1470 @@
+# depslib dependency file v1.0
+1442289568 source:d:\ycc\programming\cpp\shape\shape0915\main.cpp
+	"cppunitlite/TestHarness.h"
+	"Circle.h"
+	<vector>
+
+1406752454 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1409082726 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1406752452 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\simplestring.h
+
+1406752454 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\testresult.h
+
+1406752452 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\failure.h
+	"SimpleString.h"
+
+1406752454 d:\ycc\programming\cpp\shape\shape0915\cppunitlite\testregistry.h
+
+1442289780 d:\ycc\programming\cpp\shape\shape0915\circle.h
+	<vector>
+
+1442289813 source:d:\ycc\programming\cpp\shape\shape0915\circle.cpp
+	"Circle.h"
+
+1443269959 source:c:\users\yu chin cheng\desktop\shape0915\circle.cpp
+	"Circle.h"
+	"Rectangle.h"
+	<sstream>
+
+1443269549 c:\users\yu chin cheng\desktop\shape0915\circle.h
+	"Shape.h"
+
+1446449912 source:c:\users\yu chin cheng\desktop\shape0915\main.cpp
+	"cppunitlite/TestHarness.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"utHW3.h"
+
+1406752454 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1409082726 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1406752452 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\simplestring.h
+
+1406752454 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\testresult.h
+
+1406752452 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\failure.h
+	"SimpleString.h"
+
+1406752454 c:\users\yu chin cheng\desktop\shape0915\cppunitlite\testregistry.h
+
+1443923774 c:\users\yu chin cheng\desktop\shape0915\shape.h
+	<string>
+
+1443923842 c:\users\yu chin cheng\desktop\shape0915\square.h
+	"Shape.h"
+
+1443270229 source:c:\users\yu chin cheng\desktop\shape0915\square.cpp
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<string>
+
+1446452229 c:\users\yu chin cheng\desktop\shape0915\util.h
+	"Shape.h"
+	<vector>
+	<string>
+	"Graphics.h"
+	<stack>
+	<utility>
+
+1446452245 source:c:\users\yu chin cheng\desktop\shape0915\util.cpp
+	"util.h"
+	<fstream>
+	"CompositeGraphics.h"
+	"SimpleGraphics.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<stack>
+	<utility>
+
+1443270339 c:\users\yu chin cheng\desktop\shape0915\rectangle.h
+	"Shape.h"
+
+1443331658 source:c:\users\yu chin cheng\desktop\shape0915\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+
+1444025637 c:\users\yu chin cheng\desktop\shape0915\graphics.h
+
+1443922522 c:\users\yu chin cheng\desktop\shape0915\simplegraphics.h
+	"Graphics.h"
+	"Shape.h"
+	<iostream>
+
+1443922583 c:\users\yu chin cheng\desktop\shape0915\compositegraphics.h
+	"Graphics.h"
+	<vector>
+	"GraphicsVisitor.h"
+
+1443930554 source:c:\users\yu chin cheng\desktop\shape0915\compositegraphics.cpp
+	"CompositeGraphics.h"
+	<algorithm>
+	"Rectangle.h"
+	"GraphicsVisitor.h"
+	"AreaVisitor.h"
+
+1444979594 c:\users\yu chin cheng\desktop\shape0915\areavisitor.h
+	"GraphicsVisitor.h"
+
+1444979518 source:c:\users\yu chin cheng\desktop\shape0915\areavisitor.cpp
+	"AreaVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1443922744 source:c:\users\yu chin cheng\desktop\shape0915\graphics.cpp
+	"Graphics.h"
+	"Rectangle.h"
+	<string>
+	"AreaVisitor.h"
+
+1443926325 source:c:\users\yu chin cheng\desktop\shape0915\simplegraphics.cpp
+	"SimpleGraphics.h"
+	"Rectangle.h"
+	"AreaVisitor.h"
+
+1443930944 c:\users\yu chin cheng\desktop\shape0915\graphicsvisitor.h
+
+1443930526 source:c:\users\yu chin cheng\desktop\shape0915\descriptionvisitor.cpp
+	"DescriptionVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"Rectangle.h"
+
+1443930965 c:\users\yu chin cheng\desktop\shape0915\descriptionvisitor.h
+	"GraphicsVisitor.h"
+	"Graphics.h"
+	<string>
+
+1445753460 c:\users\yu chin cheng\desktop\shape0915\utpda.h
+	"cppunitlite/TestHarness.h"
+	<stack>
+	<string>
+	<tuple>
+
+1445753394 c:\users\yu chin cheng\desktop\shape0915\utextractgraphics.h
+	"cppunitlite/TestHarness.h"
+	<string>
+	"util.h"
+
+1446452442 source:c:\users\yu chin cheng\desktop\shape0915\graphicsfactory.cpp
+	"GraphicsFactory.h"
+	<vector>
+	<fstream>
+	<sstream>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+
+1446452148 c:\users\yu chin cheng\desktop\shape0915\graphicsfactory.h
+	"Graphics.h"
+	<stack>
+	<string>
+	<utility>
+
+1446452454 c:\users\yu chin cheng\desktop\shape0915\uthw3.h
+	"cppunitlite/TestHarness.h"
+	<string>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"GraphicsFactory.h"
+
+1444979518 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\areavisitor.cpp
+	"AreaVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1444979594 c:\users\yu chin cheng\desktop\hw3refsol-2015f\areavisitor.h
+	"GraphicsVisitor.h"
+
+1443930944 c:\users\yu chin cheng\desktop\hw3refsol-2015f\graphicsvisitor.h
+
+1443922522 c:\users\yu chin cheng\desktop\hw3refsol-2015f\simplegraphics.h
+	"Graphics.h"
+	"Shape.h"
+	<iostream>
+
+1444025637 c:\users\yu chin cheng\desktop\hw3refsol-2015f\graphics.h
+
+1443923774 c:\users\yu chin cheng\desktop\hw3refsol-2015f\shape.h
+	<string>
+
+1443922583 c:\users\yu chin cheng\desktop\hw3refsol-2015f\compositegraphics.h
+	"Graphics.h"
+	<vector>
+	"GraphicsVisitor.h"
+
+1443269959 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\circle.cpp
+	"Circle.h"
+	"Rectangle.h"
+	<sstream>
+
+1443269549 c:\users\yu chin cheng\desktop\hw3refsol-2015f\circle.h
+	"Shape.h"
+
+1443270339 c:\users\yu chin cheng\desktop\hw3refsol-2015f\rectangle.h
+	"Shape.h"
+
+1443930554 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\compositegraphics.cpp
+	"CompositeGraphics.h"
+	<algorithm>
+	"Rectangle.h"
+	"GraphicsVisitor.h"
+	"AreaVisitor.h"
+
+1443930526 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\descriptionvisitor.cpp
+	"DescriptionVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"Rectangle.h"
+
+1443930965 c:\users\yu chin cheng\desktop\hw3refsol-2015f\descriptionvisitor.h
+	"GraphicsVisitor.h"
+	"Graphics.h"
+	<string>
+
+1443922744 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\graphics.cpp
+	"Graphics.h"
+	"Rectangle.h"
+	<string>
+	"AreaVisitor.h"
+
+1446452442 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\graphicsfactory.cpp
+	"GraphicsFactory.h"
+	<vector>
+	<fstream>
+	<sstream>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+
+1446452148 c:\users\yu chin cheng\desktop\hw3refsol-2015f\graphicsfactory.h
+	"Graphics.h"
+	<stack>
+	<string>
+	<utility>
+
+1443923842 c:\users\yu chin cheng\desktop\hw3refsol-2015f\square.h
+	"Shape.h"
+
+1446452229 c:\users\yu chin cheng\desktop\hw3refsol-2015f\util.h
+	"Shape.h"
+	<vector>
+	<string>
+	"Graphics.h"
+	<stack>
+	<utility>
+
+1443331658 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+
+1443926325 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\simplegraphics.cpp
+	"SimpleGraphics.h"
+	"Rectangle.h"
+	"AreaVisitor.h"
+
+1443270229 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\square.cpp
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<string>
+
+1446452245 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\util.cpp
+	"util.h"
+	<fstream>
+	"CompositeGraphics.h"
+	"SimpleGraphics.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<stack>
+	<utility>
+
+1446453295 source:c:\users\yu chin cheng\desktop\hw3refsol-2015f\main.cpp
+	"cppunitlite/TestHarness.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"utHW3.h"
+
+1406752454 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1409082726 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1406752452 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\simplestring.h
+
+1406752454 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\testresult.h
+
+1406752452 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\failure.h
+	"SimpleString.h"
+
+1406752454 c:\users\yu chin cheng\desktop\hw3refsol-2015f\cppunitlite\testregistry.h
+
+1446453318 c:\users\yu chin cheng\desktop\hw3refsol-2015f\uthw3.h
+	"cppunitlite/TestHarness.h"
+	<string>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"GraphicsFactory.h"
+
+1444979520 source:d:\posd_workspace\103598029_hw4\areavisitor.cpp
+	"AreaVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1444979596 d:\posd_workspace\103598029_hw4\areavisitor.h
+	"GraphicsVisitor.h"
+
+1443930946 d:\posd_workspace\103598029_hw4\graphicsvisitor.h
+
+1448343806 d:\posd_workspace\103598029_hw4\simplegraphics.h
+	"Graphics.h"
+	"Shape.h"
+	<iostream>
+
+1448343668 d:\posd_workspace\103598029_hw4\graphics.h
+	"Painter.h"
+
+1448341768 d:\posd_workspace\103598029_hw4\shape.h
+	<string>
+	"Painter.h"
+
+1448343714 d:\posd_workspace\103598029_hw4\compositegraphics.h
+	"Graphics.h"
+	<vector>
+	"GraphicsVisitor.h"
+
+1448341907 source:d:\posd_workspace\103598029_hw4\circle.cpp
+	"Circle.h"
+	"Rectangle.h"
+	<sstream>
+	"CirclePainter.h"
+
+1448341807 d:\posd_workspace\103598029_hw4\circle.h
+	"Shape.h"
+	<QPainter>
+	"Painter.h"
+
+1448349219 d:\posd_workspace\103598029_hw4\rectangle.h
+	"Shape.h"
+
+1448350719 source:d:\posd_workspace\103598029_hw4\compositegraphics.cpp
+	"CompositeGraphics.h"
+	<algorithm>
+	"Rectangle.h"
+	"GraphicsVisitor.h"
+	"AreaVisitor.h"
+
+1443930528 source:d:\posd_workspace\103598029_hw4\descriptionvisitor.cpp
+	"DescriptionVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"Rectangle.h"
+
+1443930966 d:\posd_workspace\103598029_hw4\descriptionvisitor.h
+	"GraphicsVisitor.h"
+	"Graphics.h"
+	<string>
+
+1448343897 source:d:\posd_workspace\103598029_hw4\graphics.cpp
+	"Graphics.h"
+	"Rectangle.h"
+	<string>
+	"AreaVisitor.h"
+
+1446452444 source:d:\posd_workspace\103598029_hw4\graphicsfactory.cpp
+	"GraphicsFactory.h"
+	<vector>
+	<fstream>
+	<sstream>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+
+1446452150 d:\posd_workspace\103598029_hw4\graphicsfactory.h
+	"Graphics.h"
+	<stack>
+	<string>
+	<utility>
+
+1448350074 d:\posd_workspace\103598029_hw4\square.h
+	"Shape.h"
+
+1446452230 d:\posd_workspace\103598029_hw4\util.h
+	"Shape.h"
+	<vector>
+	<string>
+	"Graphics.h"
+	<stack>
+	<utility>
+
+1447936646 source:d:\posd_workspace\103598029_hw4\main.cpp
+	"cppunitlite/TestHarness.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"utHW3.h"
+	"createUI.h"
+
+1021612118 d:\posd_workspace\103598029_hw4\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_workspace\103598029_hw4\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_workspace\103598029_hw4\cppunitlite\simplestring.h
+
+1021612138 d:\posd_workspace\103598029_hw4\cppunitlite\testresult.h
+
+1021612138 d:\posd_workspace\103598029_hw4\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_workspace\103598029_hw4\cppunitlite\testregistry.h
+
+1446453320 d:\posd_workspace\103598029_hw4\uthw3.h
+	"cppunitlite/TestHarness.h"
+	<string>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"GraphicsFactory.h"
+
+1448108948 d:\posd_workspace\103598029_hw4\createui.h
+	<QApplication>
+	<QFont>
+	<QPushButton>
+	<QLabel>
+	<QVBoxLayout>
+	<QGraphicsView>
+	<QGraphicsItem>
+	"MainWindow.h"
+	"Model.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qapplication
+	"qapplication.h"
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qapplication.h
+	<QtCore/qcoreapplication.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qpoint.h>
+	<QtCore/qsize.h>
+	<QtGui/qcursor.h>
+	<QtWidgets/qdesktopwidget.h>
+	<QtGui/qguiapplication.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qcoreapplication.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qobject.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qeventloop.h>
+	<QtCore/qscopedpointer.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qglobal.h
+	<cstddef>
+	<stddef.h>
+	<QtCore/qconfig.h>
+	<QtCore/qfeatures.h>
+	<QtCore/qsystemdetection.h>
+	<QtCore/qprocessordetection.h>
+	<QtCore/qcompilerdetection.h>
+	<algorithm>
+	<QtCore/qtypeinfo.h>
+	<QtCore/qsysinfo.h>
+	<QtCore/qlogging.h>
+	<QtCore/qflags.h>
+	<QtCore/qatomic.h>
+	<QtCore/qglobalstatic.h>
+	<QtCore/qnumeric.h>
+
+1434523563 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qconfig.h
+
+1434523565 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qfeatures.h
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qsystemdetection.h
+	<QtCore/qglobal.h>
+	<TargetConditionals.h>
+	<Availability.h>
+	<AvailabilityMacros.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qprocessordetection.h
+	<QtCore/qglobal.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qcompilerdetection.h
+	<QtCore/qglobal.h>
+	<utility>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qtypeinfo.h
+	<QtCore/qtypetraits.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qtypetraits.h
+	"QtCore/qglobal.h"
+	<utility>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qsysinfo.h
+	<QtCore/qglobal.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlogging.h
+	<QtCore/qglobal.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qflags.h
+	<QtCore/qglobal.h>
+	<QtCore/qtypeinfo.h>
+	<QtCore/qtypetraits.h>
+	<initializer_list>
+
+1434474358 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic.h
+	<QtCore/qglobal.h>
+	<QtCore/qbasicatomic.h>
+
+1434474358 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qbasicatomic.h
+	<QtCore/qatomic.h>
+	<QtCore/qatomic_bootstrap.h>
+	<QtCore/qatomic_cxx11.h>
+	<QtCore/qatomic_gcc.h>
+	<QtCore/qatomic_msvc.h>
+	"QtCore/qatomic_armv7.h"
+	"QtCore/qatomic_armv6.h"
+	"QtCore/qatomic_armv5.h"
+	"QtCore/qatomic_ia64.h"
+	"QtCore/qatomic_mips.h"
+	<QtCore/qatomic_x86.h>
+	<QtCore/qatomic_cxx11.h>
+	<QtCore/qatomic_gcc.h>
+	<QtCore/qatomic_unix.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_bootstrap.h
+	<QtCore/qgenericatomic.h>
+
+1434474358 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qgenericatomic.h
+	<QtCore/qglobal.h>
+	<QtCore/qtypeinfo.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_cxx11.h
+	<QtCore/qgenericatomic.h>
+	<atomic>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_gcc.h
+	<QtCore/qgenericatomic.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_msvc.h
+	<QtCore/qgenericatomic.h>
+	<winbase.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_armv7.h
+	"QtCore/qatomic_armv6.h"
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_armv6.h
+	<QtCore/qgenericatomic.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_armv5.h
+	<QtCore/qgenericatomic.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_ia64.h
+	<QtCore/qgenericatomic.h>
+	<ia64intrin.h>
+	<ia64/sys/inline.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_mips.h
+	<QtCore/qgenericatomic.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_x86.h
+	<QtCore/qgenericatomic.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qatomic_unix.h
+	<QtCore/qgenericatomic.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qglobalstatic.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qmutex.h>
+
+1434474358 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qmutex.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<new>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qnumeric.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qstring.h
+	<QtCore/qchar.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qnamespace.h>
+	<string>
+	<stdarg.h>
+	<QtCore/qstringbuilder.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qchar.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qbytearray.h
+	<QtCore/qrefcount.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qarraydata.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<string>
+	<QtCore/qstring.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qrefcount.h
+	<QtCore/qatomic.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qnamespace.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qarraydata.h
+	<QtCore/qrefcount.h>
+	<string.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qstringbuilder.h
+	<QtCore/qstring.h>
+	<QtCore/qbytearray.h>
+	<string.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qobject.h
+	<QtCore/qobjectdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qlist.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qscopedpointer.h>
+	<QtCore/qmetatype.h>
+	<QtCore/qobject_impl.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qobjectdefs.h
+	<QtCore/qnamespace.h>
+	<QtCore/qobjectdefs_impl.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qobjectdefs_impl.h
+	<QtCore/qnamespace.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qiterator.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qarraydata.h>
+	<iterator>
+	<list>
+	<algorithm>
+	<initializer_list>
+	<stdlib.h>
+	<new>
+	<limits.h>
+	<string.h>
+	<QtCore/qbytearraylist.h>
+	<QtCore/qstringlist.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qalgorithms.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qiterator.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qbytearraylist.h
+	<QtCore/qlist.h>
+	<QtCore/qbytearray.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qstringlist.h
+	<QtCore/qlist.h>
+	<QtCore/qalgorithms.h>
+	<QtCore/qregexp.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringmatcher.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qregexp.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qstringmatcher.h
+	<QtCore/qstring.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qcoreevent.h
+	<QtCore/qnamespace.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qobjectdefs.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qscopedpointer.h
+	<QtCore/qglobal.h>
+	<stdlib.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qmetatype.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qvarlengtharray.h>
+	<QtCore/qisenum.h>
+	<QtCore/qtypetraits.h>
+	<QtCore/qobjectdefs.h>
+	<new>
+	<vector>
+	<list>
+	<map>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qvarlengtharray.h
+	<QtCore/qcontainerfwd.h>
+	<QtCore/qglobal.h>
+	<QtCore/qalgorithms.h>
+	<new>
+	<string.h>
+	<stdlib.h>
+	<algorithm>
+	<initializer_list>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qcontainerfwd.h
+	<QtCore/qglobal.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qisenum.h
+	<QtCore/qglobal.h>
+	<QtCore/qtypetraits.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qobject_impl.h
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qeventloop.h
+	<QtCore/qobject.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qwindowdefs.h
+	<QtCore/qglobal.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qnamespace.h>
+	<QtGui/qwindowdefs_win.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qwindowdefs_win.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qpoint.h
+	<QtCore/qnamespace.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qsize.h
+	<QtCore/qnamespace.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qcursor.h
+	<QtCore/qpoint.h>
+	<QtGui/qwindowdefs.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qdesktopwidget.h
+	<QtWidgets/qwidget.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qwidget.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qobject.h>
+	<QtCore/qmargins.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qpalette.h>
+	<QtGui/qfont.h>
+	<QtGui/qfontmetrics.h>
+	<QtGui/qfontinfo.h>
+	<QtWidgets/qsizepolicy.h>
+	<QtGui/qregion.h>
+	<QtGui/qbrush.h>
+	<QtGui/qcursor.h>
+	<QtGui/qkeysequence.h>
+	<QtGui/qevent.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qmargins.h
+	<QtCore/qnamespace.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpaintdevice.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qrect.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qrect.h
+	<QtCore/qmargins.h>
+	<QtCore/qsize.h>
+	<QtCore/qpoint.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpalette.h
+	<QtGui/qwindowdefs.h>
+	<QtGui/qcolor.h>
+	<QtGui/qbrush.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qcolor.h
+	<QtGui/qrgb.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstringlist.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qrgb.h
+	<QtCore/qglobal.h>
+	<QtCore/qprocessordetection.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qbrush.h
+	<QtCore/qpair.h>
+	<QtCore/qpoint.h>
+	<QtCore/qvector.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qcolor.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qtransform.h>
+	<QtGui/qimage.h>
+	<QtGui/qpixmap.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qpair.h
+	<QtCore/qglobal.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qvector.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qiterator.h>
+	<QtCore/qlist.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qarraydata.h>
+	<iterator>
+	<vector>
+	<stdlib.h>
+	<string.h>
+	<initializer_list>
+	<algorithm>
+	<QtCore/qpoint.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qmatrix.h
+	<QtGui/qpolygon.h>
+	<QtGui/qregion.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qline.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpolygon.h
+	<QtCore/qvector.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qregion.h
+	<QtCore/qatomic.h>
+	<QtCore/qrect.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qdatastream.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qdatastream.h
+	<QtCore/qscopedpointer.h>
+	<QtCore/qiodevice.h>
+	<QtCore/qpair.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qiodevice.h
+	<QtCore/qglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qscopedpointer.h>
+	<QtCore/qstring.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qline.h
+	<QtCore/qpoint.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qtransform.h
+	<QtGui/qmatrix.h>
+	<QtGui/qpainterpath.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qregion.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qline.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpainterpath.h
+	<QtGui/qmatrix.h>
+	<QtCore/qglobal.h>
+	<QtCore/qrect.h>
+	<QtCore/qline.h>
+	<QtCore/qvector.h>
+	<QtCore/qscopedpointer.h>
+
+1434474355 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qimage.h
+	<QtGui/qtransform.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qrgb.h>
+	<QtGui/qpixelformat.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qrect.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpixelformat.h
+	<QtCore/qglobal.h>
+
+1434474355 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpixmap.h
+	<QtGui/qpaintdevice.h>
+	<QtGui/qcolor.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtCore/qsharedpointer.h>
+	<QtGui/qimage.h>
+	<QtGui/qtransform.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qsharedpointer.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qsharedpointer_impl.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qshareddata.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qhash.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qhash.h
+	<QtCore/qchar.h>
+	<QtCore/qiterator.h>
+	<QtCore/qlist.h>
+	<QtCore/qpair.h>
+	<QtCore/qrefcount.h>
+	<numeric>
+	<initializer_list>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qsharedpointer_impl.h
+	<new>
+	<QtCore/qatomic.h>
+	<QtCore/qobject.h>
+	<QtCore/qhash.h>
+	<utility>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qfont.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qsharedpointer.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qfontmetrics.h
+	<QtGui/qfont.h>
+	<QtCore/qsharedpointer.h>
+	<QtCore/qrect.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qfontinfo.h
+	<QtGui/qfont.h>
+	<QtCore/qsharedpointer.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qsizepolicy.h
+	<QtCore/qobject.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qkeysequence.h
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtCore/qobjectdefs.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qevent.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qobject.h>
+	<QtGui/qregion.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtGui/qkeysequence.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qvariant.h>
+	<QtCore/qmap.h>
+	<QtCore/qvector.h>
+	<QtCore/qset.h>
+	<QtCore/qurl.h>
+	<QtCore/qfile.h>
+	<QtGui/qvector2d.h>
+	<QtGui/qtouchdevice.h>
+
+1434474359 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qvariant.h
+	<QtCore/qatomic.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qlist.h>
+	<QtCore/qmetatype.h>
+	<QtCore/qmap.h>
+	<QtCore/qhash.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+	<QtCore/qobject.h>
+	<QtCore/qbytearraylist.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qmap.h
+	<QtCore/qiterator.h>
+	<QtCore/qlist.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qpair.h>
+	<QtCore/qdebug.h>
+	<map>
+	<new>
+	<initializer_list>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qdebug.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qhash.h>
+	<QtCore/qlist.h>
+	<QtCore/qmap.h>
+	<QtCore/qpair.h>
+	<QtCore/qtextstream.h>
+	<QtCore/qstring.h>
+	<QtCore/qvector.h>
+	<QtCore/qset.h>
+	<QtCore/qcontiguouscache.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qtextstream.h
+	<QtCore/qiodevice.h>
+	<QtCore/qstring.h>
+	<QtCore/qchar.h>
+	<QtCore/qlocale.h>
+	<QtCore/qscopedpointer.h>
+	<stdio.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlocale.h
+	<QtCore/qvariant.h>
+	<QtCore/qstring.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qshareddata.h>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qset.h
+	<QtCore/qhash.h>
+	<initializer_list>
+
+1434474361 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qcontiguouscache.h
+	<QtCore/qatomic.h>
+	<limits.h>
+	<new>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qurl.h
+	<QtCore/qbytearray.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qlist.h>
+	<QtCore/qpair.h>
+	<QtCore/qglobal.h>
+	<QtCore/qurlquery.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qurlquery.h
+	<QtCore/qpair.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qurl.h>
+	<QtCore/qstringlist.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qfile.h
+	<QtCore/qfiledevice.h>
+	<QtCore/qstring.h>
+	<stdio.h>
+
+1434474360 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qfiledevice.h
+	<QtCore/qiodevice.h>
+	<QtCore/qstring.h>
+
+1434474358 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qvector2d.h
+	<QtCore/qpoint.h>
+	<QtCore/qmetatype.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qtouchdevice.h
+	<QtCore/qobject.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qguiapplication.h
+	<QtCore/qcoreapplication.h>
+	<QtGui/qwindowdefs.h>
+	<QtGui/qinputmethod.h>
+	<QtCore/qlocale.h>
+	<QtCore/qpoint.h>
+	<QtCore/qsize.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qinputmethod.h
+	<QtCore/qobject.h>
+
+1434474321 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qfont
+	"qfont.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qpushbutton
+	"qpushbutton.h"
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qpushbutton.h
+	<QtWidgets/qabstractbutton.h>
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qabstractbutton.h
+	<QtGui/qicon.h>
+	<QtGui/qkeysequence.h>
+	<QtWidgets/qwidget.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qicon.h
+	<QtCore/qglobal.h>
+	<QtCore/qsize.h>
+	<QtCore/qlist.h>
+	<QtGui/qpixmap.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qlabel
+	"qlabel.h"
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qlabel.h
+	<QtWidgets/qframe.h>
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qframe.h
+	<QtWidgets/qwidget.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qvboxlayout
+	"qboxlayout.h"
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qboxlayout.h
+	<QtWidgets/qlayout.h>
+	<QtWidgets/qwidget.h>
+	<limits.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qlayout.h
+	<QtCore/qobject.h>
+	<QtWidgets/qlayoutitem.h>
+	<QtWidgets/qsizepolicy.h>
+	<QtCore/qrect.h>
+	<QtCore/qmargins.h>
+	<limits.h>
+	<QtWidgets/qboxlayout.h>
+	<QtWidgets/qgridlayout.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qlayoutitem.h
+	<QtWidgets/qsizepolicy.h>
+	<QtCore/qrect.h>
+	<limits.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgridlayout.h
+	<QtWidgets/qlayout.h>
+	<QtWidgets/qwidget.h>
+	<limits.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsview
+	"qgraphicsview.h"
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsview.h
+	<QtCore/qmetatype.h>
+	<QtGui/qpainter.h>
+	<QtWidgets/qscrollarea.h>
+	<QtWidgets/qgraphicsscene.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpainter.h
+	<QtCore/qnamespace.h>
+	<QtCore/qrect.h>
+	<QtCore/qpoint.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qpixmap.h>
+	<QtGui/qimage.h>
+	<QtGui/qtextoption.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qpen.h>
+	<QtGui/qbrush.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qtransform.h>
+	<QtGui/qfontinfo.h>
+	<QtGui/qfontmetrics.h>
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qtextoption.h
+	<QtCore/qnamespace.h>
+	<QtCore/qchar.h>
+	<QtCore/qmetatype.h>
+
+1434474357 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpen.h
+	<QtGui/qcolor.h>
+	<QtGui/qbrush.h>
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qscrollarea.h
+	<QtWidgets/qabstractscrollarea.h>
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qabstractscrollarea.h
+	<QtWidgets/qframe.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsscene.h
+	<QtCore/qobject.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+	<QtGui/qbrush.h>
+	<QtGui/qfont.h>
+	<QtGui/qtransform.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qpen.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsitem
+	"qgraphicsitem.h"
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsitem.h
+	<QtCore/qglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qvariant.h>
+	<QtCore/qrect.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qpainterpath.h>
+	<QtGui/qpixmap.h>
+
+1448291425 d:\posd_workspace\103598029_hw4\mainwindow.h
+	<QtWidgets/QMainWindow>
+	<QWidget>
+	<QMenu>
+	<QAction>
+	<QGraphicsView>
+	<QGraphicsScene>
+	"Model.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmainwindow
+	"qmainwindow.h"
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmainwindow.h
+	<QtWidgets/qwidget.h>
+	<QtWidgets/qtabwidget.h>
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qtabwidget.h
+	<QtWidgets/qwidget.h>
+	<QtGui/qicon.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qwidget
+	"qwidget.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmenu
+	"qmenu.h"
+
+1434474340 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmenu.h
+	<QtWidgets/qwidget.h>
+	<QtCore/qstring.h>
+	<QtGui/qicon.h>
+	<QtWidgets/qaction.h>
+	<windef.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qaction.h
+	<QtGui/qkeysequence.h>
+	<QtCore/qstring.h>
+	<QtWidgets/qwidget.h>
+	<QtCore/qvariant.h>
+	<QtGui/qicon.h>
+	<QtWidgets/qactiongroup.h>
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qactiongroup.h
+	<QtWidgets/qaction.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qaction
+	"qaction.h"
+
+1448344314 d:\posd_workspace\103598029_hw4\model.h
+	"Graphics.h"
+	<string>
+	<iostream>
+	<QPainter>
+
+1448354479 source:d:\posd_workspace\103598029_hw4\mainwindow.cpp
+	"MainWindow.moc"
+	<QtWidgets>
+	<iostream>
+	<QMessageBox>
+
+1448108311 d:\posd_workspace\103598029_hw4\mainwindow.moc
+	"MainWindow.h"
+	<QtCore/qbytearray.h>
+	<QtCore/qmetatype.h>
+
+1442900876 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets
+
+1448033292 source:d:\posd_workspace\103598029_hw4\mainwindowa.cpp
+	"MainWindowA.h"
+	<QtWidgets>
+	<iostream>
+
+1448033252 d:\posd_workspace\103598029_hw4\mainwindowa.h
+	"MainWindow.h"
+
+1448344326 source:d:\posd_workspace\103598029_hw4\model.cpp
+	"Model.h"
+	"GraphicsFactory.h"
+	"Graphics.h"
+	"DescriptionVisitor.h"
+	"ShapeVisitor.h"
+
+1448350503 source:d:\posd_workspace\103598029_hw4\painter.cpp
+	"Painter.h"
+
+1448350428 d:\posd_workspace\103598029_hw4\painter.h
+	<QGraphicsItem>
+	<QPen>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpainter
+	"qpainter.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qstatictext
+	"qstatictext.h"
+
+1434474356 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qstatictext.h
+	<QtCore/qsize.h>
+	<QtCore/qstring.h>
+	<QtCore/qmetatype.h>
+	<QtGui/qtransform.h>
+	<QtGui/qfont.h>
+	<QtGui/qtextoption.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qcolor
+	"qcolor.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtgui\qpen
+	"qpen.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qpointf
+	"qpoint.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsscenedragdropevent
+	"qgraphicssceneevent.h"
+
+1434474341 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicssceneevent.h
+	<QtCore/qcoreevent.h>
+	<QtCore/qpoint.h>
+	<QtCore/qscopedpointer.h>
+	<QtCore/qrect.h>
+	<QtGui/qpolygon.h>
+	<QtCore/qset.h>
+	<QtCore/qhash.h>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsscenemouseevent
+	"qgraphicssceneevent.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsscenehoverevent
+	"qgraphicssceneevent.h"
+
+1448350430 source:d:\posd_workspace\103598029_hw4\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+	"RectanglePainter.h"
+
+1448355452 source:d:\posd_workspace\103598029_hw4\simplegraphics.cpp
+	"SimpleGraphics.h"
+	"Rectangle.h"
+	"AreaVisitor.h"
+
+1448350160 source:d:\posd_workspace\103598029_hw4\square.cpp
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<string>
+	"SquarePainter.h"
+
+1446452246 source:d:\posd_workspace\103598029_hw4\util.cpp
+	"util.h"
+	<fstream>
+	"CompositeGraphics.h"
+	"SimpleGraphics.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<stack>
+	<utility>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmessagebox
+	"qmessagebox.h"
+
+1434474342 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qmessagebox.h
+	<QtWidgets/qdialog.h>
+
+1434474342 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qdialog.h
+	<QtWidgets/qwidget.h>
+
+1448448028 source:d:\posd_workspace\103598029_hw4\shapevisitor.cpp
+	"ShapeVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1448448006 d:\posd_workspace\103598029_hw4\shapevisitor.h
+	"GraphicsVisitor.h"
+	"Painter.h"
+	<vector>
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsscene
+	"qgraphicsscene.h"
+
+1448350489 source:d:\posd_workspace\103598029_hw4\circlepainter.cpp
+	"CirclePainter.h"
+	<QPainter>
+
+1448344904 d:\posd_workspace\103598029_hw4\circlepainter.h
+	"Painter.h"
+
+1448350479 source:d:\posd_workspace\103598029_hw4\rectanglepainter.cpp
+	"RectanglePainter.h"
+	<QPainter>
+
+1448350405 d:\posd_workspace\103598029_hw4\rectanglepainter.h
+	"Painter.h"
+	<QPen>
+
+1448350456 source:d:\posd_workspace\103598029_hw4\squarepainter.cpp
+	"SquarePainter.h"
+	<QPainter>
+
+1448348861 d:\posd_workspace\103598029_hw4\squarepainter.h
+	"Painter.h"
+
