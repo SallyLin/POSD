@@ -92,7 +92,10 @@ Graphics * GraphicsFactory::extractGraphicsFromOneLine(std::string & contents, i
         throw std::string("undefined graphics");
 }
 
-Graphics * GraphicsFactory::buildGraphicsFromFile(const char * fileName) {
+vector<Graphics *> GraphicsFactory::buildGraphicsFromFile(const char * fileName) {
+    vector<Graphics*> graphics;
+    bool meetRoot = false;
+    bool firstMeet = false;
     Graphics * gr = 0;
     int indent_previous, indent_actual;
     std::string contents = fileContentsAsString(fileName);
@@ -105,14 +108,20 @@ Graphics * GraphicsFactory::buildGraphicsFromFile(const char * fileName) {
     while (!contents.empty()) {
         indent_previous = indent_actual;
         Graphics * t = extractGraphicsFromOneLine(contents, indent_actual);
-        if (indent_actual < indent_previous)
+        if(indent_actual == 0){
+            while (pda.size() > 1)
+                compose();
+            graphics.push_back(get<1>(pda.top()));
+            pda.pop();
+        }
+        else if (indent_actual < indent_previous)
             compose();
         pda.push(make_pair(indent_actual,t));
     }
     if (contents.empty()) {
         while (pda.size() > 1)
             compose();
-        gr = get<1>(pda.top());
+        graphics.push_back(get<1>(pda.top()));
     }
-    return gr;
+    return graphics;
 }

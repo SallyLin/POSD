@@ -1468,3 +1468,269 @@
 1448348861 d:\posd_workspace\103598029_hw4\squarepainter.h
 	"Painter.h"
 
+1444979520 source:d:\posd_workspace\areavisitor.cpp
+	"AreaVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1444979596 d:\posd_workspace\areavisitor.h
+	"GraphicsVisitor.h"
+
+1443930946 d:\posd_workspace\graphicsvisitor.h
+
+1448343806 d:\posd_workspace\simplegraphics.h
+	"Graphics.h"
+	"Shape.h"
+	<iostream>
+
+1448343668 d:\posd_workspace\graphics.h
+	"Painter.h"
+
+1448350428 d:\posd_workspace\painter.h
+	<QGraphicsItem>
+	<QPen>
+
+1448341768 d:\posd_workspace\shape.h
+	<string>
+	"Painter.h"
+
+1448343714 d:\posd_workspace\compositegraphics.h
+	"Graphics.h"
+	<vector>
+	"GraphicsVisitor.h"
+
+1448341907 source:d:\posd_workspace\circle.cpp
+	"Circle.h"
+	"Rectangle.h"
+	<sstream>
+	"CirclePainter.h"
+
+1448341807 d:\posd_workspace\circle.h
+	"Shape.h"
+	<QPainter>
+	"Painter.h"
+
+1448349219 d:\posd_workspace\rectangle.h
+	"Shape.h"
+
+1448344904 d:\posd_workspace\circlepainter.h
+	"Painter.h"
+
+1448350489 source:d:\posd_workspace\circlepainter.cpp
+	"CirclePainter.h"
+	<QPainter>
+
+1448350719 source:d:\posd_workspace\compositegraphics.cpp
+	"CompositeGraphics.h"
+	<algorithm>
+	"Rectangle.h"
+	"GraphicsVisitor.h"
+	"AreaVisitor.h"
+
+1443930528 source:d:\posd_workspace\descriptionvisitor.cpp
+	"DescriptionVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"Rectangle.h"
+
+1443930966 d:\posd_workspace\descriptionvisitor.h
+	"GraphicsVisitor.h"
+	"Graphics.h"
+	<string>
+
+1448343897 source:d:\posd_workspace\graphics.cpp
+	"Graphics.h"
+	"Rectangle.h"
+	<string>
+	"AreaVisitor.h"
+
+1449209262 source:d:\posd_workspace\graphicsfactory.cpp
+	"GraphicsFactory.h"
+	<vector>
+	<fstream>
+	<sstream>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+
+1449208402 d:\posd_workspace\graphicsfactory.h
+	"Graphics.h"
+	<stack>
+	<string>
+	<utility>
+
+1448350074 d:\posd_workspace\square.h
+	"Shape.h"
+
+1446452230 d:\posd_workspace\util.h
+	"Shape.h"
+	<vector>
+	<string>
+	"Graphics.h"
+	<stack>
+	<utility>
+
+1449209263 source:d:\posd_workspace\main.cpp
+	"cppunitlite/TestHarness.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"utHW3.h"
+	"createUI.h"
+
+1021612118 d:\posd_workspace\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1034763710 d:\posd_workspace\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1034765034 d:\posd_workspace\cppunitlite\simplestring.h
+
+1021612138 d:\posd_workspace\cppunitlite\testresult.h
+
+1021612138 d:\posd_workspace\cppunitlite\failure.h
+	"SimpleString.h"
+
+1021612118 d:\posd_workspace\cppunitlite\testregistry.h
+
+1449208642 d:\posd_workspace\uthw3.h
+	"cppunitlite/TestHarness.h"
+	<string>
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	"Graphics.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+	"util.h"
+	<string>
+	<vector>
+	"AreaVisitor.h"
+	"DescriptionVisitor.h"
+	"GraphicsFactory.h"
+
+1449213067 d:\posd_workspace\createui.h
+	<QApplication>
+	<QFont>
+	<QPushButton>
+	<QLabel>
+	<QVBoxLayout>
+	<QGraphicsView>
+	<QGraphicsItem>
+	"MainWindow.h"
+	"Model.h"
+
+1448291425 d:\posd_workspace\mainwindow.h
+	<QtWidgets/QMainWindow>
+	<QWidget>
+	<QMenu>
+	<QAction>
+	<QGraphicsView>
+	<QGraphicsScene>
+	"Model.h"
+
+1449208871 d:\posd_workspace\model.h
+	"Graphics.h"
+	<string>
+	<iostream>
+	<QPainter>
+
+1449145624 source:d:\posd_workspace\mainwindow.cpp
+	"MainWindow.moc"
+	<QtWidgets>
+	<iostream>
+	<QMessageBox>
+
+1448108311 d:\posd_workspace\mainwindow.moc
+	"MainWindow.h"
+	<QtCore/qbytearray.h>
+	<QtCore/qmetatype.h>
+
+1448033292 source:d:\posd_workspace\mainwindowa.cpp
+	"MainWindowA.h"
+	<QtWidgets>
+	<iostream>
+
+1448033252 d:\posd_workspace\mainwindowa.h
+	"MainWindow.h"
+
+1449209061 source:d:\posd_workspace\model.cpp
+	"Model.h"
+	"GraphicsFactory.h"
+	"Graphics.h"
+	"DescriptionVisitor.h"
+	"ShapeVisitor.h"
+
+1448448006 d:\posd_workspace\shapevisitor.h
+	"GraphicsVisitor.h"
+	"Painter.h"
+	<vector>
+
+1448350503 source:d:\posd_workspace\painter.cpp
+	"Painter.h"
+
+1448350430 source:d:\posd_workspace\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+	"RectanglePainter.h"
+
+1448350405 d:\posd_workspace\rectanglepainter.h
+	"Painter.h"
+	<QPen>
+
+1448350479 source:d:\posd_workspace\rectanglepainter.cpp
+	"RectanglePainter.h"
+	<QPainter>
+
+1448448028 source:d:\posd_workspace\shapevisitor.cpp
+	"ShapeVisitor.h"
+	"SimpleGraphics.h"
+	"CompositeGraphics.h"
+
+1448355452 source:d:\posd_workspace\simplegraphics.cpp
+	"SimpleGraphics.h"
+	"Rectangle.h"
+	"AreaVisitor.h"
+
+1448350160 source:d:\posd_workspace\square.cpp
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<string>
+	"SquarePainter.h"
+
+1448348861 d:\posd_workspace\squarepainter.h
+	"Painter.h"
+
+1448350456 source:d:\posd_workspace\squarepainter.cpp
+	"SquarePainter.h"
+	<QPainter>
+
+1446452246 source:d:\posd_workspace\util.cpp
+	"util.h"
+	<fstream>
+	"CompositeGraphics.h"
+	"SimpleGraphics.h"
+	"Circle.h"
+	"Square.h"
+	"Rectangle.h"
+	<sstream>
+	<stack>
+	<utility>
+

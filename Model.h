@@ -12,7 +12,8 @@ public:
     string getAllDescription();
     vector<Painter*> getShapes();
 private:
-    Graphics* graphics;
+    //Graphics* graphics;
+    vector<Graphics*> graphics;
 };
 
 #endif // MODEL_H_INCLUDED

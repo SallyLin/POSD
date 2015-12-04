@@ -24,6 +24,73 @@ TEST (MainWindow, show_mainwindow) {
     app.exec();
 }
 
+TEST (OneSimpleGraphics, file_rec){
+    GraphicsFactory gf;
+    Graphics * graphics = gf.buildGraphicsFromFile("rec.txt").at(0);
+
+    DescriptionVisitor dv;
+    graphics->accept(dv);
+
+    std::string ans("R(-50,-50,50,150)\n");
+    //ans += std::string("S(-100,-100,100)\n");
+    CHECK(ans==dv.getDescription());
+}
+
+TEST (TwoSimpleGraphics, file_root1){
+    GraphicsFactory gf;
+    vector<Graphics *> graphics = gf.buildGraphicsFromFile("root1.txt");
+    DescriptionVisitor dv;
+    for(int i=0 ; i<graphics.size() ; i++){
+        graphics.at(i)->accept(dv);
+    }
+    std::string ans("R(-50,-50,50,150)\n");
+    ans += std::string("S(-100,-100,100)\n");
+    CHECK(ans==dv.getDescription());
+}
+
+TEST (SimpleComposite, file_root2){
+    GraphicsFactory gf;
+    vector<Graphics *> graphics = gf.buildGraphicsFromFile("root2.txt");
+    DescriptionVisitor dv;
+    for(int i=0 ; i<graphics.size() ; i++){
+        graphics.at(i)->accept(dv);
+    }
+    std::string ans("R(-50,-50,50,150)\n");
+    ans += std::string("Comp R(-100,-100,150,150)\n");
+    ans += std::string("  C(0,0,50)\n");
+    ans += std::string("  S(-100,-100,100)\n");
+    CHECK(ans==dv.getDescription());
+}
+
+TEST (CompositeSimple, file_root3){
+    GraphicsFactory gf;
+    vector<Graphics *> graphics = gf.buildGraphicsFromFile("root3.txt");
+    DescriptionVisitor dv;
+    for(int i=0 ; i<graphics.size() ; i++){
+        graphics.at(i)->accept(dv);
+    }
+    std::string ans("Comp R(-100,-100,150,150)\n");
+    ans += std::string("  C(0,0,50)\n");
+    ans += std::string("  S(-100,-100,100)\n");
+    ans += std::string("R(-50,-50,50,150)\n");
+    CHECK(ans==dv.getDescription());
+}
+
+TEST (CompositeSimple, file_root4){
+    GraphicsFactory gf;
+    vector<Graphics *> graphics = gf.buildGraphicsFromFile("root4.txt");
+    DescriptionVisitor dv;
+    for(int i=0 ; i<graphics.size() ; i++){
+        graphics.at(i)->accept(dv);
+    }
+    std::string ans("Comp R(-100,-100,150,150)\n");
+    ans += std::string("  C(0,0,50)\n");
+    ans += std::string("  S(-100,-100,100)\n");
+    ans += std::string("Comp R(-100,-100,250,250)\n");
+    ans += std::string("  S(-50,-50,200)\n");
+    ans += std::string("  S(-100,-100,100)\n");
+    CHECK(ans==dv.getDescription());
+}
 /*
 TEST (TryQt, second) {
     QApplication app(argc, argv);

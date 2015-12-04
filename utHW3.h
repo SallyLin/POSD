@@ -59,11 +59,11 @@ TEST (GraphicsFactory, fileContentsAsString) {
     GraphicsFactory gf;
 	std::string contents = gf.fileContentsAsString("f1.txt");
 
-    std::string ans("Comp R(-2,-2,3,4)\n");
-    ans += std::string("  Comp R(-2,-2,3,3)\n");
-    ans += std::string("    C(0,0,1)\n");
-    ans += std::string("    S(-2,-2,2)\n");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    std::string ans("Comp R(-100,-100,150,200)\n");
+    ans += std::string("  Comp R(-100,-100,150,150)\n");
+    ans += std::string("    C(0,0,50)\n");
+    ans += std::string("    S(-100,-100,100)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==contents);
 }
 
@@ -83,7 +83,7 @@ TEST (GraphicsFactory, extractGraphicsFromOneLine_cir) {
 	int level;
 	Graphics * graphics = gf.extractGraphicsFromOneLine(contents, level);
 	LONGS_EQUAL (0, level);
-	CHECK (string("C(0,0,1)") == static_cast<SimpleGraphics *>(graphics)->shape()->describe());
+	CHECK (string("C(0,0,50)") == static_cast<SimpleGraphics *>(graphics)->shape()->describe());
 
 }
 
@@ -104,10 +104,10 @@ TEST (GraphicsFactory, extractGraphicsFromOneLine_composite) {
 	LONGS_EQUAL (0, level);
 	CHECK (0 != graphics);
 
-    std::string ans("  Comp R(-2,-2,3,3)\n");
-    ans += std::string("    C(0,0,1)\n");
-    ans += std::string("    S(-2,-2,2)\n");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    std::string ans("  Comp R(-100,-100,150,150)\n");
+    ans += std::string("    C(0,0,50)\n");
+    ans += std::string("    S(-100,-100,100)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==contents);
 
     graphics = gf.extractGraphicsFromOneLine(contents, level);
@@ -115,31 +115,31 @@ TEST (GraphicsFactory, extractGraphicsFromOneLine_composite) {
 	CHECK (0 != graphics);
 
     ans = string("");
-    ans += std::string("    C(0,0,1)\n");
-    ans += std::string("    S(-2,-2,2)\n");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    ans += std::string("    C(0,0,50)\n");
+    ans += std::string("    S(-100,-100,100)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==contents);
 
     graphics = gf.extractGraphicsFromOneLine(contents, level);
     LONGS_EQUAL (2, level);
-	CHECK (string("C(0,0,1)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
+	CHECK (string("C(0,0,50)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
 
     ans = string("");
-    ans += std::string("    S(-2,-2,2)\n");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    ans += std::string("    S(-100,-100,100)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==contents);
 
     graphics = gf.extractGraphicsFromOneLine(contents, level);
     LONGS_EQUAL (2, level);
-	CHECK (string("S(-2,-2,2)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
+	CHECK (string("S(-100,-100,100)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
 
     ans = string("");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==contents);
 
     graphics = gf.extractGraphicsFromOneLine(contents, level);
     LONGS_EQUAL (1, level);
-	CHECK (string("R(-1,-1,1,3)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
+	CHECK (string("R(-50,-50,50,150)")==static_cast<SimpleGraphics *>(graphics)->shape()->describe());
 
     ans = string("");
     CHECK(ans == contents);
@@ -148,22 +148,22 @@ TEST (GraphicsFactory, extractGraphicsFromOneLine_composite) {
 
 TEST (GraphicsFactory, buildGraphicsFromFile_simple) {
     GraphicsFactory gf;
-    Graphics * graphics = gf.buildGraphicsFromFile("rec1.txt");
+    Graphics * graphics = gf.buildGraphicsFromFile("rec1.txt").at(0);
     CHECK (string("R(-1,-1,1,3)") == static_cast<SimpleGraphics *>(graphics)->shape()->describe());
 }
 
 TEST (GraphicsFactory, buildGraphicsFromFile_composite) {
     GraphicsFactory gf;
-    Graphics * graphics = gf.buildGraphicsFromFile("f1.txt");
+    Graphics * graphics = gf.buildGraphicsFromFile("f1.txt").at(0);
 
     DescriptionVisitor dv;
     graphics->accept(dv);
 
-    std::string ans("Comp R(-2,-2,3,4)\n");
-    ans += std::string("  Comp R(-2,-2,3,3)\n");
-    ans += std::string("    C(0,0,1)\n");
-    ans += std::string("    S(-2,-2,2)\n");
-    ans += std::string("  R(-1,-1,1,3)\n");
+    std::string ans("Comp R(-100,-100,150,200)\n");
+    ans += std::string("  Comp R(-100,-100,150,150)\n");
+    ans += std::string("    C(0,0,50)\n");
+    ans += std::string("    S(-100,-100,100)\n");
+    ans += std::string("  R(-50,-50,50,150)\n");
     CHECK(ans==dv.getDescription());
 }
 

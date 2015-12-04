@@ -8,20 +8,22 @@ void Model::loadFile(string fileName){
     GraphicsFactory gf;
     graphics = gf.buildGraphicsFromFile(fileName.c_str());
     DescriptionVisitor dv;
-    graphics->accept(dv);
-    cout << dv.getDescription();
+    for(int i=0 ; i<graphics.size() ; i++)
+        graphics.at(i)->accept(dv);
 }
 
 string Model::getAllDescription(){
     DescriptionVisitor visitor;
-    graphics->accept(visitor);
+    for(int i=0 ; i<graphics.size() ; i++)
+        graphics.at(i)->accept(visitor);
     string des = visitor.getDescription();
     return des;
 }
 
 vector<Painter*> Model::getShapes(){
     ShapeVisitor visitor;
-    graphics->accept(visitor);
+    for(int i=0 ; i<graphics.size() ; i++)
+        graphics.at(i)->accept(visitor);
     return visitor.getPainters();
 
     //return visitor.getPainter();
