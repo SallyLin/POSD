@@ -32,8 +32,25 @@ void MainWindow::createAction(){
     saveFileAct->setShortcuts(QKeySequence::Save);
     connect(saveFileAct, SIGNAL(triggered()), this, SLOT(saveFile()));
 
+    squareAct = new QAction(QIcon("images/square.jpg"),tr("Create Square"), this);
+    connect(squareAct, SIGNAL(triggered()), this, SLOT(createSquare()));
+
+    circleAct = new QAction(QIcon("images/circle.jpg"),tr("Create Circle"), this);
+    connect(circleAct, SIGNAL(triggered()), this, SLOT(createCircle()));
+
+    rectangleAct = new QAction(QIcon("images/rectangle.png"),tr("Create Rectangle"), this);
+    connect(rectangleAct, SIGNAL(triggered()), this, SLOT(createRectangle()));
+
     aboutDeveloperAct = new QAction(tr("&About Developer"), this);
     connect(aboutDeveloperAct, SIGNAL(triggered()), this, SLOT(aboutDeveloper()));
+
+    undoAct = new QAction(QIcon("images/undo.png"), tr("Undo"), this);
+    undoAct->setShortcut(QKeySequence::Undo);
+    connect(undoAct, SIGNAL(triggered()), this, SLOT(undo()));
+
+    redoAct = new QAction(QIcon("images/redo.png"), tr("Redo"), this);
+    redoAct->setShortcut(QKeySequence::Redo);
+    connect(redoAct, SIGNAL(triggered()), this, SLOT(redo()));
 }
 
 void MainWindow::createMenus(){
@@ -43,12 +60,24 @@ void MainWindow::createMenus(){
 
     aboutMenu = menuBar()->addMenu(tr("&About"));
     aboutMenu->addAction(aboutDeveloperAct);
+
+    shapeMenu = menuBar()->addMenu(tr("&Create Shape"));
+    shapeMenu->addAction(squareAct);
+    shapeMenu->addAction(circleAct);
+    shapeMenu->addAction(rectangleAct);
 }
 
 void MainWindow::createToolBars(){
     fileToolBar = addToolBar(tr("File"));
     fileToolBar->addAction(loadFileAct);
     fileToolBar->addAction(saveFileAct);
+
+    editToolBar = addToolBar(tr("Edit"));
+    editToolBar->addAction(undoAct);
+    editToolBar->addAction(redoAct);
+    editToolBar->addAction(squareAct);
+    editToolBar->addAction(circleAct);
+    editToolBar->addAction(rectangleAct);
 }
 
 void MainWindow::loadFile(){
@@ -120,10 +149,43 @@ void MainWindow::aboutDeveloper(){
 }
 
 void MainWindow::drawShapes(){
+    scene->clear();
     vector<Painter*> shapes = model->getShapes();
     for (auto s:shapes){
         scene->addItem(s);
     }
+    scene->update();
+}
 
-        scene->update();
+void MainWindow::createSquare(){
+    model->actCreateSquare();
+    drawShapes();
+}
+
+void MainWindow::createCircle(){
+    model->actCreateCircle();
+    drawShapes();
+}
+
+void MainWindow::createRectangle(){
+    model->actCreateRectangle();
+    drawShapes();
+}
+
+void MainWindow::undo(){
+    try{
+        model->actUndo();
+        drawShapes();
+    }catch(string e){
+        QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
+	}
+}
+
+void MainWindow::redo(){
+    try{
+        model->actRedo();
+        drawShapes();
+    }catch(string e){
+        QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
+	}
 }
