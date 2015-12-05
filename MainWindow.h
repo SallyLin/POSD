@@ -6,12 +6,12 @@
 #include <QAction>
 #include <QGraphicsView>
 #include <QGraphicsScene>
-#include "Model.h"
+#include "Presentation.h"
 
 class MainWindow : public QMainWindow{
     Q_OBJECT
 public:
-    MainWindow(Model* model);
+    MainWindow(Presentation* presentation);
 
 protected:
     QWidget *widget;
@@ -39,7 +39,7 @@ private:
     void writeFile(QString fileName, QString data);
     void drawShapes();
 
-    Model* model;
+    Presentation* p;
 
 private slots:
     void loadFile();

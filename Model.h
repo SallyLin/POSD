@@ -10,11 +10,10 @@ using namespace std;
 class Model{
 public:
     Model();
-    void loadFile(string fileName);
+    //used by Presentation
     string getAllDescription();
     vector<Painter*> getShapes();
-
-    //used by UI
+    void loadFile(string fileName);
     void actCreateSquare();
     void actCreateCircle();
     void actCreateRectangle();
