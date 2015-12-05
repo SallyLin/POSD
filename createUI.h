@@ -18,9 +18,8 @@ char * argv[1]={a};
 
 TEST (MainWindow, show_mainwindow) {
     QApplication app(argc, argv);
-    Model model;
-    Presentation presentation(&model);
-    MainWindow window(&presentation);
+    Model* model = new Model();
+    MainWindow window(model);
     window.show();
     app.exec();
 }
