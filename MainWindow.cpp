@@ -4,7 +4,7 @@
 #include <QMessageBox>
 
 
-MainWindow::MainWindow(Model* model){
+MainWindow::MainWindow(Presentation* presentation):p(presentation){
     widget = new QWidget;
     this->setWindowTitle("Graphics Editor");
     setCentralWidget(widget);
@@ -20,7 +20,6 @@ MainWindow::MainWindow(Model* model){
     createToolBars();
     setMinimumSize(1000, 700);
 
-    this->model = model;
 }
 
 void MainWindow::createAction(){
@@ -91,7 +90,7 @@ void MainWindow::loadFile(){
 
 void MainWindow::loadFile(QString fileName){
     try{
-        model->loadFile(fileName.toStdString());
+        p->loadFile(fileName.toStdString());
         QMessageBox::information(this, tr("Success"), tr("Success"));
         drawShapes();
     }catch(string e){
@@ -110,7 +109,7 @@ void MainWindow::saveFile(){
             files = dialog.selectedFiles();
         else
             return;
-        string descriptions = model->getAllDescription();
+        string descriptions = p->getAllDescription();
 
         writeFile(files.at(0), QString::fromStdString(descriptions));
 	}catch(string e){
@@ -150,7 +149,7 @@ void MainWindow::aboutDeveloper(){
 
 void MainWindow::drawShapes(){
     scene->clear();
-    vector<Painter*> shapes = model->getShapes();
+    vector<Painter*> shapes = p->getShapes();
     for (auto s:shapes){
         scene->addItem(s);
     }
@@ -158,23 +157,23 @@ void MainWindow::drawShapes(){
 }
 
 void MainWindow::createSquare(){
-    model->actCreateSquare();
+    p->createSquare();
     drawShapes();
 }
 
 void MainWindow::createCircle(){
-    model->actCreateCircle();
+    p->createCircle();
     drawShapes();
 }
 
 void MainWindow::createRectangle(){
-    model->actCreateRectangle();
+    p->createRectangle();
     drawShapes();
 }
 
 void MainWindow::undo(){
     try{
-        model->actUndo();
+        p->undo();
         drawShapes();
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
@@ -183,7 +182,7 @@ void MainWindow::undo(){
 
 void MainWindow::redo(){
     try{
-        model->actRedo();
+        p->redo();
         drawShapes();
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));

@@ -1891,7 +1891,7 @@
 	"DescriptionVisitor.h"
 	"GraphicsFactory.h"
 
-1449213143 d:\git\posd\createui.h
+1449278395 d:\git\posd\createui.h
 	<QApplication>
 	<QFont>
 	<QPushButton>
@@ -1902,23 +1902,23 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449242054 d:\git\posd\mainwindow.h
+1449278328 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
 	<QAction>
 	<QGraphicsView>
 	<QGraphicsScene>
-	"Model.h"
+	"Presentation.h"
 
-1449241916 d:\git\posd\model.h
+1449278622 d:\git\posd\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
 	<iostream>
 	<QPainter>
 
-1449242190 source:d:\git\posd\mainwindow.cpp
+1449278865 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -2050,4 +2050,10 @@
 
 1449241806 d:\git\posd\createrectanglecommand.h
 	"Command.h"
+
+1449278782 d:\git\posd\presentation.h
+	"Model.h"
+	<vector>
+	<string>
+	"Painter.h"
 
