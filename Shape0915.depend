@@ -1752,7 +1752,7 @@
 1449221432 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449377925 d:\git\posd\painter.h
+1449379385 d:\git\posd\painter.h
 	<QGraphicsItem>
 	<QPen>
 
@@ -1782,7 +1782,7 @@
 1449377868 d:\git\posd\circlepainter.h
 	"Painter.h"
 
-1449378061 source:d:\git\posd\circlepainter.cpp
+1449379470 source:d:\git\posd\circlepainter.cpp
 	"CirclePainter.h"
 	<QPainter>
 
@@ -1918,11 +1918,12 @@
 	<iostream>
 	<QPainter>
 
-1449377327 source:d:\git\posd\mainwindow.cpp
+1449379368 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
 	<QMessageBox>
+	<QList>
 
 1449377292 d:\git\posd\mainwindow.moc
 	"MainWindow.h"
@@ -1965,7 +1966,7 @@
 	"Painter.h"
 	<QPen>
 
-1449378061 source:d:\git\posd\rectanglepainter.cpp
+1449379508 source:d:\git\posd\rectanglepainter.cpp
 	"RectanglePainter.h"
 	<QPainter>
 
@@ -1989,7 +1990,7 @@
 1449377868 d:\git\posd\squarepainter.h
 	"Painter.h"
 
-1449378061 source:d:\git\posd\squarepainter.cpp
+1449379521 source:d:\git\posd\squarepainter.cpp
 	"SquarePainter.h"
 	<QPainter>
 
@@ -2351,4 +2352,7 @@
 
 1449221432 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist
+	"qlist.h"
 

@@ -12,12 +12,13 @@ public:
 
     QRectF boundingRect() const;
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-    virtual void green();
     void setWindow(MainWindow *window);
 
+    //virtual method
+    virtual void green();
 protected:
     QPen pen;
-    qreal px, py;
+    //qreal px, py;
     MainWindow *w;
 };
 

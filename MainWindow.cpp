@@ -2,6 +2,7 @@
 #include <QtWidgets>
 #include <iostream>
 #include <QMessageBox>
+#include <QList>
 
 
 MainWindow::MainWindow(Presentation* presentation):p(presentation){
@@ -194,5 +195,11 @@ void MainWindow::redo(){
 }
 
 void MainWindow::omit(){
-
+    QMessageBox::information(this, tr("Warning"), tr("delete"));
+    QList<QGraphicsItem*> selectedList = scene->selectedItems();
+    for(auto item : selectedList){
+        if(item->isSelected()){
+            Painter *p = static_cast<Painter*>(item);
+        }
+    }
 }
