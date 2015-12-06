@@ -14,7 +14,7 @@ public:
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 
 private:
-    qreal x, y, l, w;
+    qreal l, w;
 };
 
 #endif // RECTANGLEPAINTER_H_INCLUDED

@@ -11,7 +11,7 @@ public:
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 
 private:
-    qreal x, y, r;
+    qreal r;
 };
 
 #endif // CIRCLEPAINTER_H_INCLUDED

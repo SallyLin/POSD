@@ -3,6 +3,8 @@
 
 #include <QGraphicsItem>
 #include <QPen>
+
+class MainWindow;
 class Painter : public QGraphicsItem{
 public:
     Painter();
@@ -11,9 +13,12 @@ public:
     QRectF boundingRect() const;
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
     virtual void green();
+    void setWindow(MainWindow *window);
 
 protected:
     QPen pen;
+    qreal px, py;
+    MainWindow *w;
 };
 
 

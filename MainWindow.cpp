@@ -31,10 +31,10 @@ void MainWindow::createAction(){
     saveFileAct->setShortcuts(QKeySequence::Save);
     connect(saveFileAct, SIGNAL(triggered()), this, SLOT(saveFile()));
 
-    squareAct = new QAction(QIcon("images/square.jpg"),tr("Create Square"), this);
+    squareAct = new QAction(QIcon("images/square.png"),tr("Create Square"), this);
     connect(squareAct, SIGNAL(triggered()), this, SLOT(createSquare()));
 
-    circleAct = new QAction(QIcon("images/circle.jpg"),tr("Create Circle"), this);
+    circleAct = new QAction(QIcon("images/circle.png"),tr("Create Circle"), this);
     connect(circleAct, SIGNAL(triggered()), this, SLOT(createCircle()));
 
     rectangleAct = new QAction(QIcon("images/rectangle.png"),tr("Create Rectangle"), this);
@@ -50,6 +50,10 @@ void MainWindow::createAction(){
     redoAct = new QAction(QIcon("images/redo.png"), tr("Redo"), this);
     redoAct->setShortcut(QKeySequence::Redo);
     connect(redoAct, SIGNAL(triggered()), this, SLOT(redo()));
+
+    omitAct = new QAction(QIcon("images/delete.png"), tr("Redo"), this);
+    omitAct->setShortcut(QKeySequence::Redo);
+    connect(omitAct, SIGNAL(triggered()), this, SLOT(omit()));
 }
 
 void MainWindow::createMenus(){
@@ -74,6 +78,7 @@ void MainWindow::createToolBars(){
     editToolBar = addToolBar(tr("Edit"));
     editToolBar->addAction(undoAct);
     editToolBar->addAction(redoAct);
+    editToolBar->addAction(omitAct);
     editToolBar->addAction(squareAct);
     editToolBar->addAction(circleAct);
     editToolBar->addAction(rectangleAct);
@@ -91,7 +96,6 @@ void MainWindow::loadFile(){
 void MainWindow::loadFile(QString fileName){
     try{
         p->loadFile(fileName.toStdString());
-        QMessageBox::information(this, tr("Success"), tr("Success"));
         drawShapes();
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
@@ -187,4 +191,8 @@ void MainWindow::redo(){
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
 	}
+}
+
+void MainWindow::omit(){
+
 }

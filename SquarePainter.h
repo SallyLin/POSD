@@ -11,7 +11,7 @@ public:
     QRectF boundingRect() const;
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 private:
-    qreal x, y, l;
+    qreal l;
 };
 
 #endif // SQUAREPAINTER_H_INCLUDED

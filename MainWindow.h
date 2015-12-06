@@ -27,6 +27,7 @@ protected:
     QAction *rectangleAct;
     QAction *undoAct;
     QAction *redoAct;
+    QAction *omitAct;
     QGraphicsView *graphicsView;
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
@@ -50,6 +51,7 @@ private slots:
     void createRectangle();
     void undo();
     void redo();
+    void omit();
 };
 
 
