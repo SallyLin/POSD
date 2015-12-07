@@ -33,3 +33,7 @@ void Presentation::redo(){
 void Presentation::undo(){
     m->actUndo();
 }
+/*
+void Presentation::omit(){
+
+}*/

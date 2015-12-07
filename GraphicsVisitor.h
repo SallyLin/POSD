@@ -11,6 +11,8 @@ public:
     virtual void visitCompositeGraphics(CompositeGraphics *cg)=0;
     virtual void enter() {}
     virtual void leave() {}
+    virtual void pushChildNum(int num) {}
+    virtual void compose() {}
 public:
     GraphicsVisitor(){}
 };

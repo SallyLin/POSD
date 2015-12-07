@@ -1,15 +1,19 @@
 #include "MainWindow.moc"
 #include <QtWidgets>
 #include <iostream>
+#include <sstream>
 #include <QMessageBox>
 #include <QList>
-
+using namespace std;
 
 MainWindow::MainWindow(Presentation* presentation):p(presentation){
     widget = new QWidget;
     this->setWindowTitle("Graphics Editor");
     setCentralWidget(widget);
     graphicsView = new QGraphicsView(widget);
+    graphicsView->setMouseTracking(true);
+    graphicsView->setDragMode(QGraphicsView::ScrollHandDrag);
+    graphicsView->setDragMode(QGraphicsView::RubberBandDrag);
     QVBoxLayout *layout = new QVBoxLayout;
     scene = new QGraphicsScene();
     graphicsView->setScene(scene);
@@ -55,6 +59,9 @@ void MainWindow::createAction(){
     omitAct = new QAction(QIcon("images/delete.png"), tr("Redo"), this);
     omitAct->setShortcut(QKeySequence::Redo);
     connect(omitAct, SIGNAL(triggered()), this, SLOT(omit()));
+
+    groupAct = new QAction(QIcon("images/group.png"), tr("Group"), this);
+    connect(groupAct, SIGNAL(triggered()), this, SLOT(group()));
 }
 
 void MainWindow::createMenus(){
@@ -83,6 +90,7 @@ void MainWindow::createToolBars(){
     editToolBar->addAction(squareAct);
     editToolBar->addAction(circleAct);
     editToolBar->addAction(rectangleAct);
+    editToolBar->addAction(groupAct);
 }
 
 void MainWindow::loadFile(){
@@ -195,11 +203,26 @@ void MainWindow::redo(){
 }
 
 void MainWindow::omit(){
-    QMessageBox::information(this, tr("Warning"), tr("delete"));
+    string str;
+    stringstream ss;
     QList<QGraphicsItem*> selectedList = scene->selectedItems();
+    ss << selectedList.size();
+    QMessageBox msgbox;
+    QString qstr = QString::fromStdString(ss.str());
+    msgbox.setText(qstr);
+    msgbox.exec();
     for(auto item : selectedList){
-        if(item->isSelected()){
-            Painter *p = static_cast<Painter*>(item);
-        }
+            Painter *painter = static_cast<Painter*>(item);
+            ss << "(x, y) = (" << painter->px << ", " << painter->py << ")" <<endl;
+            QMessageBox msgbox;
+            QString qstr = QString::fromStdString(ss.str());
+            msgbox.setText(qstr);
+            msgbox.exec();
     }
+}
+
+void MainWindow::group(){
+    QList<QGraphicsItem*> selectedList = scene->selectedItems();
+    QGraphicsItemGroup* group = scene->createItemGroup(selectedList);
+    //scene->addItem(group);
 }

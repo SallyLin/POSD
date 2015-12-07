@@ -17,6 +17,7 @@ public:
     void createRectangle();
     void undo();
     void redo();
+    //void omit(QPoint point);
 private:
     Model* m;
 };

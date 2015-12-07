@@ -33,8 +33,10 @@ Rectangle CompositeGraphics::getBoundingBox() {
 void CompositeGraphics::accept(GraphicsVisitor & av) {
     av.visitCompositeGraphics(this);
     av.enter();
+    av.pushChildNum(g_obj.size());
     for (auto e:g_obj)
         e->accept(av);
+    av.compose();
     av.leave();
 }
 

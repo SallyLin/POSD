@@ -1,6 +1,9 @@
 #include "Painter.h"
 #include "MainWindow.h"
-Painter::Painter(){ pen.setColor("blue");}
+Painter::Painter(){
+    pen.setColor("blue");
+    setFlags(QGraphicsItemGroup::ItemIsSelectable | QGraphicsItemGroup::ItemIsMovable);
+}
 
 Painter::~Painter(){}
 

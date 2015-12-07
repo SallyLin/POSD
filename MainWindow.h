@@ -28,6 +28,7 @@ protected:
     QAction *undoAct;
     QAction *redoAct;
     QAction *omitAct;
+    QAction *groupAct;
     QGraphicsView *graphicsView;
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
@@ -52,6 +53,7 @@ private slots:
     void undo();
     void redo();
     void omit();
+    void group();
 };
 
 

@@ -1742,7 +1742,7 @@
 1449221432 d:\git\posd\areavisitor.h
 	"GraphicsVisitor.h"
 
-1449221432 d:\git\posd\graphicsvisitor.h
+1449499833 d:\git\posd\graphicsvisitor.h
 
 1449221432 d:\git\posd\simplegraphics.h
 	"Graphics.h"
@@ -1752,8 +1752,8 @@
 1449221432 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449379385 d:\git\posd\painter.h
-	<QGraphicsItem>
+1449493539 d:\git\posd\painter.h
+	<QGraphicsItemGroup>
 	<QPen>
 
 1449221432 d:\git\posd\shape.h
@@ -1782,11 +1782,11 @@
 1449377868 d:\git\posd\circlepainter.h
 	"Painter.h"
 
-1449379470 source:d:\git\posd\circlepainter.cpp
+1449478012 source:d:\git\posd\circlepainter.cpp
 	"CirclePainter.h"
 	<QPainter>
 
-1449221432 source:d:\git\posd\compositegraphics.cpp
+1449500623 source:d:\git\posd\compositegraphics.cpp
 	"CompositeGraphics.h"
 	<algorithm>
 	"Rectangle.h"
@@ -1902,7 +1902,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449376895 d:\git\posd\mainwindow.h
+1449481533 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -1918,14 +1918,15 @@
 	<iostream>
 	<QPainter>
 
-1449379368 source:d:\git\posd\mainwindow.cpp
+1449493326 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
+	<sstream>
 	<QMessageBox>
 	<QList>
 
-1449377292 d:\git\posd\mainwindow.moc
+1449483483 d:\git\posd\mainwindow.moc
 	"MainWindow.h"
 	<QtCore/qbytearray.h>
 	<QtCore/qmetatype.h>
@@ -1948,12 +1949,13 @@
 	"CreateCircleCommand.h"
 	"CreateRectangleCommand.h"
 
-1449221432 d:\git\posd\shapevisitor.h
+1449499845 d:\git\posd\shapevisitor.h
 	"GraphicsVisitor.h"
 	"Painter.h"
 	<vector>
+	<stack>
 
-1449377547 source:d:\git\posd\painter.cpp
+1449493524 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"MainWindow.h"
 
@@ -1966,14 +1968,15 @@
 	"Painter.h"
 	<QPen>
 
-1449379508 source:d:\git\posd\rectanglepainter.cpp
+1449477989 source:d:\git\posd\rectanglepainter.cpp
 	"RectanglePainter.h"
 	<QPainter>
 
-1449221432 source:d:\git\posd\shapevisitor.cpp
+1449497487 source:d:\git\posd\shapevisitor.cpp
 	"ShapeVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
+	<iostream>
 
 1449221432 source:d:\git\posd\simplegraphics.cpp
 	"SimpleGraphics.h"
@@ -1990,7 +1993,7 @@
 1449377868 d:\git\posd\squarepainter.h
 	"Painter.h"
 
-1449379521 source:d:\git\posd\squarepainter.cpp
+1449477972 source:d:\git\posd\squarepainter.cpp
 	"SquarePainter.h"
 	<QPainter>
 
@@ -2053,7 +2056,7 @@
 1449221432 d:\git\posd\createrectanglecommand.h
 	"Command.h"
 
-1449221432 d:\git\posd\presentation.h
+1449477034 d:\git\posd\presentation.h
 	"Model.h"
 	<vector>
 	<string>
@@ -2350,9 +2353,12 @@
 	<stack>
 	<utility>
 
-1449221432 source:d:\git\posd\presentation.cpp
+1449477296 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist
 	"qlist.h"
+
+1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtwidgets\qgraphicsitemgroup
+	"qgraphicsitem.h"
 
