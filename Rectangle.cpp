@@ -14,6 +14,6 @@ std::string Rectangle::describe() {
 
 Painter* Rectangle::getPainter(){
     qreal rx(x), ry(y), length(l), width(w);
-    RectanglePainter* rp = new RectanglePainter(rx, ry, length, width);
+    RectanglePainter* rp = new RectanglePainter(rx, ry, length, width, describe());
     return rp;
 }

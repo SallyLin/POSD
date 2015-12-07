@@ -15,6 +15,6 @@ std::string Square::describe() {
 
 Painter* Square::getPainter(){
     qreal rx(x), ry(y), length(l);
-    SquarePainter* sp = new SquarePainter(rx, ry, length);
+    SquarePainter* sp = new SquarePainter(rx, ry, length, describe());
     return sp;
 }

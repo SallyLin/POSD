@@ -12,6 +12,7 @@ public:
     Rectangle getBoundingBox();
     void accept(GraphicsVisitor & av);
     Painter* getPainter();
+    std::string description();
 private:
     std::vector<Graphics *> g_obj;
 };

@@ -1,9 +1,11 @@
 #include "CirclePainter.h"
 #include <QPainter>
 
-CirclePainter::CirclePainter(qreal cx, qreal cy, qreal radius):Painter(), r(radius){
+CirclePainter::CirclePainter(qreal cx, qreal cy, qreal radius, std::string description)
+    :Painter(), r(radius){
     this->px = cx;
     this->py = cy;
+    this->des = description;
 }
 
 CirclePainter::~CirclePainter(){}

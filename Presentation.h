@@ -17,6 +17,8 @@ public:
     void createRectangle();
     void undo();
     void redo();
+    void group(vector<string> descriptoins);
+    Painter* getNewGroup();
     //void omit(QPoint point);
 private:
     Model* m;

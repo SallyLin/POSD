@@ -19,10 +19,13 @@ public:
     void actCreateRectangle();
     void actUndo();
     void actRedo();
+    void actGroup(vector<string> descriptions);
+    Painter* getNewGroup();
 
-    //used by command
+    //used by commands
     void addGraphices(Graphics* g);
     void deleteLastGraphics();
+    void groupGraphis(vector<string> descriptions);
 private:
     //Graphics* graphics;
     vector<Graphics*> graphics;

@@ -16,6 +16,6 @@ std::string Circle::describe() {
 
 Painter* Circle::getPainter(){
     qreal x(cx), y(cy), radius(r);
-    CirclePainter* cp = new CirclePainter(x, y, radius);
+    CirclePainter* cp = new CirclePainter(x, y, radius, describe());
     return cp;
 }

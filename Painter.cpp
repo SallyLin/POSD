@@ -21,3 +21,7 @@ void Painter::green(){
 void Painter::setWindow(MainWindow *window){
     this->w = window;
 }
+
+std::string Painter::description(){
+    return this->des;
+}

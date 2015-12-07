@@ -33,6 +33,14 @@ void Presentation::redo(){
 void Presentation::undo(){
     m->actUndo();
 }
+
+void Presentation::group(vector<string> descriptions){
+    m->actGroup(descriptions);
+}
+
+Painter* Presentation::getNewGroup(){
+    m->getNewGroup();
+}
 /*
 void Presentation::omit(){
 

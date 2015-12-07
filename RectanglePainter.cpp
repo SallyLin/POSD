@@ -1,10 +1,11 @@
 #include "RectanglePainter.h"
 #include <QPainter>
 
-RectanglePainter::RectanglePainter(qreal rx, qreal ry, qreal length, qreal width)
+RectanglePainter::RectanglePainter(qreal rx, qreal ry, qreal length, qreal width, std::string description)
     :Painter(), l(length), w(width){
     this->px = rx;
     this->py = ry;
+    this->des = description;
 }
 
 RectanglePainter::~RectanglePainter(){}

@@ -13,6 +13,7 @@ public:
     void accept(GraphicsVisitor &av);
     Shape * shape();
     Painter* getPainter();
+    std::string description();
 private:
     Shape * s;
 };

@@ -4,6 +4,9 @@
 #include <sstream>
 #include <QMessageBox>
 #include <QList>
+#include "RectanglePainter.h"
+#include <vector>
+#include <string>
 using namespace std;
 
 MainWindow::MainWindow(Presentation* presentation):p(presentation){
@@ -223,6 +226,14 @@ void MainWindow::omit(){
 
 void MainWindow::group(){
     QList<QGraphicsItem*> selectedList = scene->selectedItems();
-    QGraphicsItemGroup* group = scene->createItemGroup(selectedList);
-    //scene->addItem(group);
+    vector<string> descriptions;
+    for(auto item : selectedList){
+        Painter* painter = static_cast<Painter*> (item);
+        scene->removeItem(item);
+        descriptions.push_back(painter->description());
+    }
+    p->group(descriptions);
+    Painter* group = p->getNewGroup();
+    scene->addItem(p->getNewGroup());
+    scene->update();
 }

@@ -14,13 +14,14 @@ public:
     QRectF boundingRect() const;
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
     void setWindow(MainWindow *window);
+    std::string description();
 
     //virtual method
     virtual void green();
 protected:
     QPen pen;
-
     MainWindow *w;
+    std::string des;
 };
 
 

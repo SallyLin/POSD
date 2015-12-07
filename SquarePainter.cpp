@@ -1,9 +1,10 @@
 #include "SquarePainter.h"
 #include <QPainter>
 
-SquarePainter::SquarePainter(qreal sx, qreal sy, qreal length):Painter(), l(length){
+SquarePainter::SquarePainter(qreal sx, qreal sy, qreal length, std::string description):Painter(), l(length){
     this->px = sx;
     this->py = sy;
+    this->des = description;
 }
 
 SquarePainter::~SquarePainter(){}

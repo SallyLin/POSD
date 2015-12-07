@@ -5,7 +5,7 @@
 
 class SquarePainter : public Painter{
 public:
-    SquarePainter(qreal sx, qreal sy, qreal length);
+    SquarePainter(qreal sx, qreal sy, qreal length, std::string description);
     virtual ~SquarePainter();
 
     QRectF boundingRect() const;

@@ -9,3 +9,4 @@ void Graphics::accept(GraphicsVisitor & av) {}
 Graphics::Graphics(){}
 Graphics::~Graphics(){}
 Painter* Graphics::getPainter(){return new Painter(); }
+std::string Graphics::description(){ return std::string(""); }

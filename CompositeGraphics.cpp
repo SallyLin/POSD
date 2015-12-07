@@ -46,3 +46,7 @@ Painter* CompositeGraphics::getPainter(){
     p->green();
     return p;
 }
+
+std::string CompositeGraphics::description(){
+    return getBoundingBox().describe();
+}

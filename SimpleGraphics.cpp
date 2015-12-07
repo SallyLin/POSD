@@ -9,3 +9,7 @@ Shape * SimpleGraphics::shape() {return s;}
 Painter* SimpleGraphics::getPainter(){
     return s->getPainter();
 }
+
+std::string SimpleGraphics::description(){
+    return s->describe();
+}

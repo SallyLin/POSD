@@ -11,6 +11,7 @@ public:
     virtual void add(Graphics *g);
     virtual void accept(GraphicsVisitor & av);
     virtual Painter* getPainter();
+    virtual std::string description();
 protected:
     Graphics();
 };

@@ -4,7 +4,7 @@
 #include "Painter.h"
 class CirclePainter : public Painter{
 public:
-    CirclePainter(qreal cx, qreal cy, qreal radius);
+    CirclePainter(qreal cx, qreal cy, qreal radius, std::string description);
     virtual ~CirclePainter();
 
     QRectF boundingRect() const;

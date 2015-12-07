@@ -6,9 +6,9 @@
 
 class RectanglePainter : public Painter{
 public:
-    RectanglePainter(qreal rx, qreal ry, qreal length, qreal width);
+    RectanglePainter(qreal rx, qreal ry, qreal length, qreal width, std::string description);
     virtual ~RectanglePainter();
-    void blue();
+    //void blue();
 
     QRectF boundingRect() const;
     void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);

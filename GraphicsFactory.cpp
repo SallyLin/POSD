@@ -94,9 +94,6 @@ Graphics * GraphicsFactory::extractGraphicsFromOneLine(std::string & contents, i
 
 vector<Graphics *> GraphicsFactory::buildGraphicsFromFile(const char * fileName) {
     vector<Graphics*> graphics;
-    bool meetRoot = false;
-    bool firstMeet = false;
-    Graphics * gr = 0;
     int indent_previous, indent_actual;
     std::string contents = fileContentsAsString(fileName);
     Graphics * top = extractGraphicsFromOneLine(contents, indent_actual);

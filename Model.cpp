@@ -6,6 +6,9 @@
 #include "CreateSquareCommand.h"
 #include "CreateCircleCommand.h"
 #include "CreateRectangleCommand.h"
+#include "Rectangle.h"
+#include "CompositeGraphics.h"
+#include "GroupCommand.h"
 Model::Model(){
     x=-100;
     y=-100;
@@ -65,4 +68,38 @@ void Model::actUndo(){
 
 void Model::actRedo(){
     cmdMgr.redo();
+}
+
+void Model::actGroup(vector<string> descriptions){
+    cmdMgr.execute(new GroupCommand(this, descriptions));
+}
+
+void Model::groupGraphis(vector<string> descriptions){
+    vector<Graphics*> children;
+    vector<string>::iterator d_it = descriptions.end()-1;
+    vector<Graphics*>::iterator g_it = graphics.end()-1;
+    while(g_it >= graphics.begin()){
+        while(d_it >= descriptions.begin()){
+            if((*d_it).compare((*g_it)->description()) == 0){
+                children.push_back((*g_it));
+                graphics.erase(g_it);
+            }
+            d_it--;
+        }
+        d_it = descriptions.end()-1;
+        g_it--;
+    }
+    CompositeGraphics* cg = new CompositeGraphics();
+    for(auto child : children){
+        cg->add(child);
+    }
+    graphics.push_back(cg);
+}
+
+Painter* Model::getNewGroup(){
+    vector<Graphics*>::iterator it=graphics.end()-1;
+    cout << graphics.at((graphics.size()-1))->description() << endl;
+    ShapeVisitor sv;
+    (*it)->accept(sv);
+    return sv.getPainters().at(0);
 }
