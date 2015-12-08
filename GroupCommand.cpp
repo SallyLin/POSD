@@ -10,5 +10,5 @@ void GroupCommand::execute(){
 }
 
 void GroupCommand::unexecute(){
-
+    m->ungroupGraphics(0);
 }

@@ -43,10 +43,19 @@ void CompositeGraphics::accept(GraphicsVisitor & av) {
 Painter* CompositeGraphics::getPainter(){
     Rectangle bounding = getBoundingBox();
     Painter* p = bounding.getPainter();
+    std::string d("Comp ");
+    d += bounding.describe();
+    p->setDescription(d);
     p->green();
     return p;
 }
 
 std::string CompositeGraphics::description(){
-    return getBoundingBox().describe();
+    std::string d("Comp ");
+    d += getBoundingBox().describe();
+    return d;
+}
+
+vector<Graphics*> CompositeGraphics::getChildren(){
+    return this->g_obj;
 }

@@ -65,6 +65,9 @@ void MainWindow::createAction(){
 
     groupAct = new QAction(QIcon("images/group.png"), tr("Group"), this);
     connect(groupAct, SIGNAL(triggered()), this, SLOT(group()));
+
+    ungroupAct = new QAction(QIcon("images/ungroup.png"), tr("Ungroup"), this);
+    connect(ungroupAct, SIGNAL(triggered()), this, SLOT(ungroup()));
 }
 
 void MainWindow::createMenus(){
@@ -94,6 +97,7 @@ void MainWindow::createToolBars(){
     editToolBar->addAction(circleAct);
     editToolBar->addAction(rectangleAct);
     editToolBar->addAction(groupAct);
+    editToolBar->addAction(ungroupAct);
 }
 
 void MainWindow::loadFile(){
@@ -226,14 +230,31 @@ void MainWindow::omit(){
 
 void MainWindow::group(){
     QList<QGraphicsItem*> selectedList = scene->selectedItems();
-    vector<string> descriptions;
-    for(auto item : selectedList){
-        Painter* painter = static_cast<Painter*> (item);
-        scene->removeItem(item);
-        descriptions.push_back(painter->description());
+    if(selectedList.size() > 1){
+        vector<string> descriptions;
+        for(auto item : selectedList){
+            Painter* painter = static_cast<Painter*> (item);
+            scene->removeItem(item);
+            descriptions.push_back(painter->description());
+        }
+        p->group(descriptions);
+        p->getNewGroup();
+        scene->addItem(p->getNewGroup());
+        scene->update();
     }
-    p->group(descriptions);
-    Painter* group = p->getNewGroup();
-    scene->addItem(p->getNewGroup());
-    scene->update();
+}
+
+void MainWindow::ungroup(){
+    QList<QGraphicsItem*> selectedList = scene->selectedItems();
+    Painter* group = static_cast<Painter*>(selectedList.front());
+    vector<Painter*> children = group->getChildren();
+    if(!children.empty()){
+        p->ungroup(group->description());
+        scene->removeItem(group);
+
+        for(auto child : children){
+            scene->addItem(child);
+        }
+        scene->update();
+    }
 }

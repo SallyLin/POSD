@@ -12,6 +12,7 @@ public:
     virtual void accept(GraphicsVisitor & av);
     virtual Painter* getPainter();
     virtual std::string description();
+    virtual vector<Graphics*> getChildren();
 protected:
     Graphics();
 };
