@@ -25,16 +25,3 @@ void Painter::setWindow(MainWindow *window){
 std::string Painter::description(){
     return this->des;
 }
-
-void Painter::setDescription(std::string content){
-    this->des = content;
-}
-
-void Painter::addChild(Painter* child){
-    children.push_back(child);
-    addToGroup(child);
-}
-
-vector<Painter*> Painter::getChildren(){
-    return this->children;
-}

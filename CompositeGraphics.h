@@ -13,7 +13,6 @@ public:
     void accept(GraphicsVisitor & av);
     Painter* getPainter();
     std::string description();
-    vector<Graphics*> getChildren();
 private:
     std::vector<Graphics *> g_obj;
 };

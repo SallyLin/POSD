@@ -33,7 +33,7 @@ void ShapeVisitor::compose(){
         }
         Painter* group = painters.back();
         for(auto child : children){
-            group->addChild(child);
+            group->addToGroup(child);
         }
     }
 }

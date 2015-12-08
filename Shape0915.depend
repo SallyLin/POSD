@@ -1749,19 +1749,18 @@
 	"Shape.h"
 	<iostream>
 
-1449548830 d:\git\posd\graphics.h
+1449513407 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449553246 d:\git\posd\painter.h
+1449506595 d:\git\posd\painter.h
 	<QGraphicsItemGroup>
 	<QPen>
-	<vector>
 
 1449221432 d:\git\posd\shape.h
 	<string>
 	"Painter.h"
 
-1449549124 d:\git\posd\compositegraphics.h
+1449513470 d:\git\posd\compositegraphics.h
 	"Graphics.h"
 	<vector>
 	"GraphicsVisitor.h"
@@ -1787,7 +1786,7 @@
 	"CirclePainter.h"
 	<QPainter>
 
-1449550487 source:d:\git\posd\compositegraphics.cpp
+1449513539 source:d:\git\posd\compositegraphics.cpp
 	"CompositeGraphics.h"
 	<algorithm>
 	"Rectangle.h"
@@ -1805,7 +1804,7 @@
 	"Graphics.h"
 	<string>
 
-1449548911 source:d:\git\posd\graphics.cpp
+1449513444 source:d:\git\posd\graphics.cpp
 	"Graphics.h"
 	"Rectangle.h"
 	<string>
@@ -1903,7 +1902,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449550735 d:\git\posd\mainwindow.h
+1449481533 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -1912,14 +1911,14 @@
 	<QGraphicsScene>
 	"Presentation.h"
 
-1449554051 d:\git\posd\model.h
+1449509860 d:\git\posd\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
 	<iostream>
 	<QPainter>
 
-1449554193 source:d:\git\posd\mainwindow.cpp
+1449514950 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -1930,7 +1929,7 @@
 	<vector>
 	<string>
 
-1449551097 d:\git\posd\mainwindow.moc
+1449483483 d:\git\posd\mainwindow.moc
 	"MainWindow.h"
 	<QtCore/qbytearray.h>
 	<QtCore/qmetatype.h>
@@ -1943,7 +1942,7 @@
 1449221432 d:\git\posd\mainwindowa.h
 	"MainWindow.h"
 
-1449555540 source:d:\git\posd\model.cpp
+1449514694 source:d:\git\posd\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -1955,7 +1954,7 @@
 	"Rectangle.h"
 	"CompositeGraphics.h"
 	"GroupCommand.h"
-	"UngroupCommand.h"
+	"FindGraphicsVisitor.h"
 
 1449500697 d:\git\posd\shapevisitor.h
 	"GraphicsVisitor.h"
@@ -1963,7 +1962,7 @@
 	<vector>
 	<stack>
 
-1449553282 source:d:\git\posd\painter.cpp
+1449506629 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"MainWindow.h"
 
@@ -1980,7 +1979,7 @@
 	"RectanglePainter.h"
 	<QPainter>
 
-1449516029 source:d:\git\posd\shapevisitor.cpp
+1449500690 source:d:\git\posd\shapevisitor.cpp
 	"ShapeVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
@@ -2063,7 +2062,7 @@
 1449221432 d:\git\posd\createrectanglecommand.h
 	"Command.h"
 
-1449551342 d:\git\posd\presentation.h
+1449509451 d:\git\posd\presentation.h
 	"Model.h"
 	<vector>
 	<string>
@@ -2360,7 +2359,7 @@
 	<stack>
 	<utility>
 
-1449554246 source:d:\git\posd\presentation.cpp
+1449509880 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist
@@ -2381,7 +2380,7 @@
 	<vector>
 	<string>
 
-1449554062 source:d:\git\posd\groupcommand.cpp
+1449509231 source:d:\git\posd\groupcommand.cpp
 	"GroupCommand.h"
 	"Model.h"
 
@@ -2389,12 +2388,4 @@
 	"Command.h"
 	<vector>
 	<string>
-
-1449553043 d:\git\posd\ungroupcommand.h
-	"Command.h"
-	<string>
-
-1449553910 source:d:\git\posd\ungroupcommand.cpp
-	"UngroupCommand.h"
-	"Model.h"
 

@@ -20,16 +20,12 @@ public:
     void actUndo();
     void actRedo();
     void actGroup(vector<string> descriptions);
-    void actUngroup(string description);
     Painter* getNewGroup();
 
     //used by commands
     void addGraphices(Graphics* g);
     void deleteLastGraphics();
     void groupGraphis(vector<string> descriptions);
-    void ungroupGraphics(Graphics* g);
-    void executeUngroup(string description);
-    void unexecuteUngroup(int childNum);
 private:
     //Graphics* graphics;
     vector<Graphics*> graphics;

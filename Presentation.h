@@ -18,7 +18,6 @@ public:
     void undo();
     void redo();
     void group(vector<string> descriptoins);
-    void ungroup(string description);
     Painter* getNewGroup();
     //void omit(QPoint point);
 private:
