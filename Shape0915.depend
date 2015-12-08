@@ -1734,83 +1734,84 @@
 	<stack>
 	<utility>
 
-1449221432 source:d:\git\posd\areavisitor.cpp
+1449498458 source:d:\git\posd\areavisitor.cpp
 	"AreaVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 
-1449221432 d:\git\posd\areavisitor.h
+1449498458 d:\git\posd\areavisitor.h
 	"GraphicsVisitor.h"
 
-1449499833 d:\git\posd\graphicsvisitor.h
+1449498458 d:\git\posd\graphicsvisitor.h
 
-1449513557 d:\git\posd\simplegraphics.h
+1449498458 d:\git\posd\simplegraphics.h
 	"Graphics.h"
 	"Shape.h"
 	<iostream>
 
-1449513407 d:\git\posd\graphics.h
+1449498458 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449506595 d:\git\posd\painter.h
+1449498458 d:\git\posd\painter.h
 	<QGraphicsItemGroup>
 	<QPen>
+	<vector>
 
-1449221432 d:\git\posd\shape.h
+1449498458 d:\git\posd\shape.h
 	<string>
 	"Painter.h"
 
-1449513470 d:\git\posd\compositegraphics.h
+1449498458 d:\git\posd\compositegraphics.h
 	"Graphics.h"
 	<vector>
 	"GraphicsVisitor.h"
 
-1449505560 source:d:\git\posd\circle.cpp
+1449498458 source:d:\git\posd\circle.cpp
 	"Circle.h"
 	"Rectangle.h"
 	<sstream>
 	"CirclePainter.h"
 
-1449221432 d:\git\posd\circle.h
+1449498458 d:\git\posd\circle.h
 	"Shape.h"
 	<QPainter>
 	"Painter.h"
 
-1449221432 d:\git\posd\rectangle.h
+1449498458 d:\git\posd\rectangle.h
 	"Shape.h"
 
-1449505495 d:\git\posd\circlepainter.h
+1449498458 d:\git\posd\circlepainter.h
 	"Painter.h"
 
-1449505604 source:d:\git\posd\circlepainter.cpp
+1449498458 source:d:\git\posd\circlepainter.cpp
 	"CirclePainter.h"
 	<QPainter>
 
-1449513539 source:d:\git\posd\compositegraphics.cpp
+1449498458 source:d:\git\posd\compositegraphics.cpp
 	"CompositeGraphics.h"
 	<algorithm>
 	"Rectangle.h"
 	"GraphicsVisitor.h"
 	"AreaVisitor.h"
 
-1449221432 source:d:\git\posd\descriptionvisitor.cpp
+1449498458 source:d:\git\posd\descriptionvisitor.cpp
 	"DescriptionVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 	"Rectangle.h"
 
-1449221432 d:\git\posd\descriptionvisitor.h
+1449498458 d:\git\posd\descriptionvisitor.h
 	"GraphicsVisitor.h"
 	"Graphics.h"
 	<string>
 
-1449513444 source:d:\git\posd\graphics.cpp
+1449498458 source:d:\git\posd\graphics.cpp
 	"Graphics.h"
 	"Rectangle.h"
 	<string>
 	"AreaVisitor.h"
 
-1449505656 source:d:\git\posd\graphicsfactory.cpp
+1449498458 source:d:\git\posd\graphicsfactory.cpp
 	"GraphicsFactory.h"
 	<vector>
 	<fstream>
@@ -1823,16 +1824,16 @@
 	"CompositeGraphics.h"
 	"util.h"
 
-1449221432 d:\git\posd\graphicsfactory.h
+1449498458 d:\git\posd\graphicsfactory.h
 	"Graphics.h"
 	<stack>
 	<string>
 	<utility>
 
-1449221432 d:\git\posd\square.h
+1449498458 d:\git\posd\square.h
 	"Shape.h"
 
-1449221432 d:\git\posd\util.h
+1449498458 d:\git\posd\util.h
 	"Shape.h"
 	<vector>
 	<string>
@@ -1840,7 +1841,7 @@
 	<stack>
 	<utility>
 
-1449221432 source:d:\git\posd\main.cpp
+1449498458 source:d:\git\posd\main.cpp
 	"cppunitlite/TestHarness.h"
 	"Circle.h"
 	"Square.h"
@@ -1856,26 +1857,26 @@
 	"utHW3.h"
 	"createUI.h"
 
-1449221432 d:\git\posd\cppunitlite\testharness.h
+1449498458 d:\git\posd\cppunitlite\testharness.h
 	"Test.h"
 	"TestResult.h"
 	"Failure.h"
 	"TestRegistry.h"
 
-1449221432 d:\git\posd\cppunitlite\test.h
+1449498458 d:\git\posd\cppunitlite\test.h
 	<cmath>
 	"SimpleString.h"
 
-1449221432 d:\git\posd\cppunitlite\simplestring.h
+1449498458 d:\git\posd\cppunitlite\simplestring.h
 
-1449221432 d:\git\posd\cppunitlite\testresult.h
+1449498458 d:\git\posd\cppunitlite\testresult.h
 
-1449221432 d:\git\posd\cppunitlite\failure.h
+1449498458 d:\git\posd\cppunitlite\failure.h
 	"SimpleString.h"
 
-1449221432 d:\git\posd\cppunitlite\testregistry.h
+1449498458 d:\git\posd\cppunitlite\testregistry.h
 
-1449221432 d:\git\posd\uthw3.h
+1449498458 d:\git\posd\uthw3.h
 	"cppunitlite/TestHarness.h"
 	<string>
 	"Circle.h"
@@ -1891,7 +1892,7 @@
 	"DescriptionVisitor.h"
 	"GraphicsFactory.h"
 
-1449221432 d:\git\posd\createui.h
+1449498458 d:\git\posd\createui.h
 	<QApplication>
 	<QFont>
 	<QPushButton>
@@ -1902,7 +1903,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449481533 d:\git\posd\mainwindow.h
+1449498458 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -1911,14 +1912,15 @@
 	<QGraphicsScene>
 	"Presentation.h"
 
-1449509860 d:\git\posd\model.h
+1449569082 d:\git\posd\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
 	<iostream>
 	<QPainter>
+	<stack>
 
-1449514950 source:d:\git\posd\mainwindow.cpp
+1449577225 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -1929,20 +1931,20 @@
 	<vector>
 	<string>
 
-1449483483 d:\git\posd\mainwindow.moc
+1449498458 d:\git\posd\mainwindow.moc
 	"MainWindow.h"
 	<QtCore/qbytearray.h>
 	<QtCore/qmetatype.h>
 
-1449221432 source:d:\git\posd\mainwindowa.cpp
+1449498458 source:d:\git\posd\mainwindowa.cpp
 	"MainWindowA.h"
 	<QtWidgets>
 	<iostream>
 
-1449221432 d:\git\posd\mainwindowa.h
+1449498458 d:\git\posd\mainwindowa.h
 	"MainWindow.h"
 
-1449514694 source:d:\git\posd\model.cpp
+1449577244 source:d:\git\posd\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -1954,56 +1956,57 @@
 	"Rectangle.h"
 	"CompositeGraphics.h"
 	"GroupCommand.h"
-	"FindGraphicsVisitor.h"
+	"UngroupCommand.h"
+	"DeleteCommand.h"
 
-1449500697 d:\git\posd\shapevisitor.h
+1449498458 d:\git\posd\shapevisitor.h
 	"GraphicsVisitor.h"
 	"Painter.h"
 	<vector>
 	<stack>
 
-1449506629 source:d:\git\posd\painter.cpp
+1449498458 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"MainWindow.h"
 
-1449505823 source:d:\git\posd\rectangle.cpp
+1449498458 source:d:\git\posd\rectangle.cpp
 	"Rectangle.h"
 	<sstream>
 	"RectanglePainter.h"
 
-1449505705 d:\git\posd\rectanglepainter.h
+1449498458 d:\git\posd\rectanglepainter.h
 	"Painter.h"
 	<QPen>
 
-1449505724 source:d:\git\posd\rectanglepainter.cpp
+1449498458 source:d:\git\posd\rectanglepainter.cpp
 	"RectanglePainter.h"
 	<QPainter>
 
-1449500690 source:d:\git\posd\shapevisitor.cpp
+1449498458 source:d:\git\posd\shapevisitor.cpp
 	"ShapeVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 
-1449513585 source:d:\git\posd\simplegraphics.cpp
+1449498458 source:d:\git\posd\simplegraphics.cpp
 	"SimpleGraphics.h"
 	"Rectangle.h"
 	"AreaVisitor.h"
 
-1449505868 source:d:\git\posd\square.cpp
+1449498458 source:d:\git\posd\square.cpp
 	"Square.h"
 	"Rectangle.h"
 	<sstream>
 	<string>
 	"SquarePainter.h"
 
-1449505795 d:\git\posd\squarepainter.h
+1449498458 d:\git\posd\squarepainter.h
 	"Painter.h"
 
-1449505786 source:d:\git\posd\squarepainter.cpp
+1449498458 source:d:\git\posd\squarepainter.cpp
 	"SquarePainter.h"
 	<QPainter>
 
-1449221432 source:d:\git\posd\util.cpp
+1449498458 source:d:\git\posd\util.cpp
 	"util.h"
 	<fstream>
 	"CompositeGraphics.h"
@@ -2015,16 +2018,16 @@
 	<stack>
 	<utility>
 
-1449221432 source:d:\git\posd\command.cpp
+1449498458 source:d:\git\posd\command.cpp
 	"Command.h"
 
-1449221432 d:\git\posd\command.h
+1449498458 d:\git\posd\command.h
 
-1449221432 source:d:\git\posd\commandmanager.cpp
+1449498458 source:d:\git\posd\commandmanager.cpp
 	"CommandManager.h"
 	<string>
 
-1449221432 d:\git\posd\commandmanager.h
+1449498458 d:\git\posd\commandmanager.h
 	<stack>
 	"Command.h"
 
@@ -2035,116 +2038,117 @@
 1449219197 d:\git\posd\squarecommand.h
 	"Command.h"
 
-1449221432 source:d:\git\posd\createsquarecommand.cpp
+1449498458 source:d:\git\posd\createsquarecommand.cpp
 	"CreateSquareCommand.h"
 	"Model.h"
 	"SimpleGraphics.h"
 	"Square.h"
 
-1449221432 d:\git\posd\createsquarecommand.h
+1449498458 d:\git\posd\createsquarecommand.h
 	"Command.h"
 
-1449221432 source:d:\git\posd\createcirclecommand.cpp
+1449498458 source:d:\git\posd\createcirclecommand.cpp
 	"CreateCircleCommand.h"
 	"Model.h"
 	"SimpleGraphics.h"
 	"Circle.h"
 
-1449221432 d:\git\posd\createcirclecommand.h
+1449498458 d:\git\posd\createcirclecommand.h
 	"Command.h"
 
-1449221432 source:d:\git\posd\createrectanglecommand.cpp
+1449498458 source:d:\git\posd\createrectanglecommand.cpp
 	"CreateRectangleCommand.h"
 	"Model.h"
 	"SimpleGraphics.h"
 	"Rectangle.h"
 
-1449221432 d:\git\posd\createrectanglecommand.h
+1449498458 d:\git\posd\createrectanglecommand.h
 	"Command.h"
 
-1449509451 d:\git\posd\presentation.h
+1449569056 d:\git\posd\presentation.h
 	"Model.h"
 	<vector>
 	<string>
 	"Painter.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\areavisitor.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\areavisitor.cpp
 	"AreaVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\areavisitor.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\areavisitor.h
 	"GraphicsVisitor.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\graphicsvisitor.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\graphicsvisitor.h
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\simplegraphics.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\simplegraphics.h
 	"Graphics.h"
 	"Shape.h"
 	<iostream>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\graphics.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\graphics.h
 	"Painter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\painter.h
-	<QGraphicsItem>
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\painter.h
+	<QGraphicsItemGroup>
 	<QPen>
+	<vector>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\shape.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\shape.h
 	<string>
 	"Painter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\compositegraphics.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\compositegraphics.h
 	"Graphics.h"
 	<vector>
 	"GraphicsVisitor.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\circle.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\circle.cpp
 	"Circle.h"
 	"Rectangle.h"
 	<sstream>
 	"CirclePainter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\circle.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\circle.h
 	"Shape.h"
 	<QPainter>
 	"Painter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\rectangle.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\rectangle.h
 	"Shape.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\circlepainter.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\circlepainter.h
 	"Painter.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\circlepainter.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\circlepainter.cpp
 	"CirclePainter.h"
 	<QPainter>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\compositegraphics.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\compositegraphics.cpp
 	"CompositeGraphics.h"
 	<algorithm>
 	"Rectangle.h"
 	"GraphicsVisitor.h"
 	"AreaVisitor.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\descriptionvisitor.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\descriptionvisitor.cpp
 	"DescriptionVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 	"Rectangle.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\descriptionvisitor.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\descriptionvisitor.h
 	"GraphicsVisitor.h"
 	"Graphics.h"
 	<string>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\graphics.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\graphics.cpp
 	"Graphics.h"
 	"Rectangle.h"
 	<string>
 	"AreaVisitor.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\graphicsfactory.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\graphicsfactory.cpp
 	"GraphicsFactory.h"
 	<vector>
 	<fstream>
@@ -2157,16 +2161,16 @@
 	"CompositeGraphics.h"
 	"util.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\graphicsfactory.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\graphicsfactory.h
 	"Graphics.h"
 	<stack>
 	<string>
 	<utility>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\square.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\square.h
 	"Shape.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\util.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\util.h
 	"Shape.h"
 	<vector>
 	<string>
@@ -2174,7 +2178,7 @@
 	<stack>
 	<utility>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\main.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\main.cpp
 	"cppunitlite/TestHarness.h"
 	"Circle.h"
 	"Square.h"
@@ -2190,26 +2194,26 @@
 	"utHW3.h"
 	"createUI.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testharness.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testharness.h
 	"Test.h"
 	"TestResult.h"
 	"Failure.h"
 	"TestRegistry.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\test.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\test.h
 	<cmath>
 	"SimpleString.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\simplestring.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\simplestring.h
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testresult.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testresult.h
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\failure.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\failure.h
 	"SimpleString.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testregistry.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\cppunitlite\testregistry.h
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\uthw3.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\uthw3.h
 	"cppunitlite/TestHarness.h"
 	<string>
 	"Circle.h"
@@ -2225,7 +2229,7 @@
 	"DescriptionVisitor.h"
 	"GraphicsFactory.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\createui.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\createui.h
 	<QApplication>
 	<QFont>
 	<QPushButton>
@@ -2236,7 +2240,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -2245,45 +2249,50 @@
 	<QGraphicsScene>
 	"Presentation.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\presentation.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\presentation.h
 	"Model.h"
 	<vector>
 	<string>
 	"Painter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\model.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
 	<iostream>
 	<QPainter>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\commandmanager.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\commandmanager.h
 	<stack>
 	"Command.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\command.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\command.h
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
+	<sstream>
 	<QMessageBox>
+	<QList>
+	"RectanglePainter.h"
+	<vector>
+	<string>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.moc
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\mainwindow.moc
 	"MainWindow.h"
 	<QtCore/qbytearray.h>
 	<QtCore/qmetatype.h>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\mainwindowa.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\mainwindowa.cpp
 	"MainWindowA.h"
 	<QtWidgets>
 	<iostream>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\mainwindowa.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\mainwindowa.h
 	"MainWindow.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\model.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -2292,62 +2301,68 @@
 	"CreateSquareCommand.h"
 	"CreateCircleCommand.h"
 	"CreateRectangleCommand.h"
+	"Rectangle.h"
+	"CompositeGraphics.h"
+	"GroupCommand.h"
+	"UngroupCommand.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\shapevisitor.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\shapevisitor.h
 	"GraphicsVisitor.h"
 	"Painter.h"
 	<vector>
+	<stack>
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\createsquarecommand.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\createsquarecommand.h
 	"Command.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\createcirclecommand.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\createcirclecommand.h
 	"Command.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\createrectanglecommand.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\createrectanglecommand.h
 	"Command.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\painter.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\painter.cpp
 	"Painter.h"
+	"MainWindow.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\rectangle.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\rectangle.cpp
 	"Rectangle.h"
 	<sstream>
 	"RectanglePainter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\rectanglepainter.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\rectanglepainter.h
 	"Painter.h"
 	<QPen>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\rectanglepainter.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\rectanglepainter.cpp
 	"RectanglePainter.h"
 	<QPainter>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\shapevisitor.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\shapevisitor.cpp
 	"ShapeVisitor.h"
 	"SimpleGraphics.h"
 	"CompositeGraphics.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\simplegraphics.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\simplegraphics.cpp
 	"SimpleGraphics.h"
 	"Rectangle.h"
 	"AreaVisitor.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\square.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\square.cpp
 	"Square.h"
 	"Rectangle.h"
 	<sstream>
 	<string>
 	"SquarePainter.h"
 
-1449221432 c:\users\sallylin\desktop\posd-master\posd-master\squarepainter.h
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\squarepainter.h
 	"Painter.h"
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\squarepainter.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\squarepainter.cpp
 	"SquarePainter.h"
 	<QPainter>
 
-1449221432 source:c:\users\sallylin\desktop\posd-master\posd-master\util.cpp
+1449498458 source:c:\users\sallylin\desktop\posd-master\posd-master\util.cpp
 	"util.h"
 	<fstream>
 	"CompositeGraphics.h"
@@ -2359,7 +2374,7 @@
 	<stack>
 	<utility>
 
-1449509880 source:d:\git\posd\presentation.cpp
+1449568889 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist
@@ -2380,12 +2395,36 @@
 	<vector>
 	<string>
 
-1449509231 source:d:\git\posd\groupcommand.cpp
+1449498458 source:d:\git\posd\groupcommand.cpp
 	"GroupCommand.h"
 	"Model.h"
 
-1449509172 d:\git\posd\groupcommand.h
+1449498458 d:\git\posd\groupcommand.h
 	"Command.h"
 	<vector>
 	<string>
+
+1449498458 d:\git\posd\ungroupcommand.h
+	"Command.h"
+	<string>
+
+1449498458 source:d:\git\posd\ungroupcommand.cpp
+	"UngroupCommand.h"
+	"Model.h"
+
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\groupcommand.h
+	"Command.h"
+	<vector>
+	<string>
+
+1449498458 c:\users\sallylin\desktop\posd-master\posd-master\ungroupcommand.h
+	"Command.h"
+	<string>
+
+1449557535 source:d:\git\posd\deletecommand.cpp
+	"DeleteCommand.h"
+	"Model.h"
+
+1449557215 d:\git\posd\deletecommand.h
+	"Command.h"
 

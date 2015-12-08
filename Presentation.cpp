@@ -41,7 +41,11 @@ void Presentation::group(vector<string> descriptions){
 Painter* Presentation::getNewGroup(){
     m->getNewGroup();
 }
-/*
-void Presentation::omit(){
 
-}*/
+void Presentation::ungroup(string description){
+    m->actUngroup(description);
+}
+
+void Presentation::omit(string description){
+    m->actOmit(description);
+}
