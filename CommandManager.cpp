@@ -2,7 +2,12 @@
 #include <string>
 CommandManager::CommandManager(){}
 
-CommandManager::~CommandManager(){}
+CommandManager::~CommandManager(){
+    while(!redoCmds.empty())
+        redoCmds.pop();
+    while(!undoCmds.empty())
+        undoCmds.pop();
+}
 
 void CommandManager::execute(Command* cmd) {
 	cmd->execute();

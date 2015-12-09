@@ -19,14 +19,17 @@ MainWindow::MainWindow(Presentation* presentation):p(presentation){
     graphicsView->setDragMode(QGraphicsView::RubberBandDrag);
     QVBoxLayout *layout = new QVBoxLayout;
     scene = new QGraphicsScene();
+    scene->setSceneRect(-500, -400, 900, 800);
     graphicsView->setScene(scene);
+    graphicsView->setSceneRect(-450, -400, 900, 800);
+    graphicsView->resize(900, 800);
     layout->setMargin(0);
     layout->addWidget(graphicsView);
     widget->setLayout(layout);
     createAction();
     createMenus();
     createToolBars();
-    setMinimumSize(1000, 700);
+    setMinimumSize(900, 800);
 
 }
 
@@ -106,7 +109,7 @@ void MainWindow::loadFile(){
         scene->clear();
         loadFile(fileName);
     }
-
+    p->clearAll();
 }
 
 void MainWindow::loadFile(QString fileName){
@@ -135,7 +138,7 @@ void MainWindow::saveFile(){
 	}catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
 	}
-
+    p->clearAll();
 	QMessageBox msgbox;
     std::string message("Save!!\n");
     QString qstr = QString::fromStdString(message);
@@ -172,8 +175,7 @@ void MainWindow::drawShapes(){
     scene->clear();
     vector<Painter*> shapes = p->getShapes();
     for (auto s:shapes){
-        s->setPresentation(p);
-        cout << s->description() << endl;
+        s->setWindow(this);
         scene->addItem(s);
     }
     scene->update();
@@ -235,10 +237,11 @@ void MainWindow::group(){
             descriptions.push_back(painter->description());
         }
         p->group(descriptions);
-        Painter* group = p->getNewGroup();
+        /*Painter* group = p->getNewGroup();
         group->setPresentation(p);
         scene->addItem(group);
-        scene->update();
+        scene->update();*/
+        drawShapes();
     }
 }
 
@@ -258,4 +261,17 @@ void MainWindow::ungroup(){
         }
         scene->update();
     }*/
+}
+
+void MainWindow::graphicPointChange(int del_x, int del_y){
+    p->graphicPointChange(del_x, del_y);
+    drawShapes();
+}
+
+void MainWindow::setDrag(bool flag){
+    p->setDrag(flag);
+}
+
+void MainWindow::setSelectedGraphicDescription(string description){
+    p->setSelectedGraphicDescription(description);
 }

@@ -1752,7 +1752,7 @@
 1449585569 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449577911 d:\git\posd\painter.h
+1449637491 d:\git\posd\painter.h
 	<QGraphicsItemGroup>
 	<QPen>
 	<vector>
@@ -1903,7 +1903,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449498458 d:\git\posd\mainwindow.h
+1449647510 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -1912,7 +1912,7 @@
 	<QGraphicsScene>
 	"Presentation.h"
 
-1449625990 d:\git\posd\model.h
+1449667920 d:\git\posd\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
@@ -1920,7 +1920,7 @@
 	<QPainter>
 	<stack>
 
-1449626217 source:d:\git\posd\mainwindow.cpp
+1449668196 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -1944,7 +1944,7 @@
 1449498458 d:\git\posd\mainwindowa.h
 	"MainWindow.h"
 
-1449626138 source:d:\git\posd\model.cpp
+1449659623 source:d:\git\posd\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -1966,9 +1966,10 @@
 	<vector>
 	<stack>
 
-1449625248 source:d:\git\posd\painter.cpp
+1449648700 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"Presentation.h"
+	"MainWindow.h"
 	<QGraphicsSceneMouseEvent>
 
 1449586187 source:d:\git\posd\rectangle.cpp
@@ -1994,7 +1995,7 @@
 	"Rectangle.h"
 	"AreaVisitor.h"
 
-1449586199 source:d:\git\posd\square.cpp
+1449629687 source:d:\git\posd\square.cpp
 	"Square.h"
 	"Rectangle.h"
 	<sstream>
@@ -2004,9 +2005,10 @@
 1449498458 d:\git\posd\squarepainter.h
 	"Painter.h"
 
-1449498458 source:d:\git\posd\squarepainter.cpp
+1449655685 source:d:\git\posd\squarepainter.cpp
 	"SquarePainter.h"
 	<QPainter>
+	<iostream>
 
 1449498458 source:d:\git\posd\util.cpp
 	"util.h"
@@ -2025,7 +2027,7 @@
 
 1449498458 d:\git\posd\command.h
 
-1449498458 source:d:\git\posd\commandmanager.cpp
+1449668321 source:d:\git\posd\commandmanager.cpp
 	"CommandManager.h"
 	<string>
 
@@ -2067,7 +2069,7 @@
 1449498458 d:\git\posd\createrectanglecommand.h
 	"Command.h"
 
-1449625945 d:\git\posd\presentation.h
+1449668115 d:\git\posd\presentation.h
 	"Model.h"
 	<vector>
 	<string>
@@ -2376,7 +2378,7 @@
 	<stack>
 	<utility>
 
-1449626228 source:d:\git\posd\presentation.cpp
+1449628751 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist
@@ -2430,11 +2432,12 @@
 1449557215 d:\git\posd\deletecommand.h
 	"Command.h"
 
-1449588632 source:d:\git\posd\movecommand.cpp
+1449656731 source:d:\git\posd\movecommand.cpp
 	"MoveCommand.h"
 	"Model.h"
 
-1449579416 d:\git\posd\movecommand.h
+1449657590 d:\git\posd\movecommand.h
 	"Command.h"
 	<string>
+	"Graphics.h"
 

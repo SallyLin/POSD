@@ -20,14 +20,14 @@ public:
     void actCreateRectangle();
     void actUndo();
     void actRedo();
-    //void actOmit(string description);
     void actOmit();
     void actGroup(vector<string> descriptions);
-    //void actUngroup(string description);
     void actUngroup();
     void actMove(int del_x, int del_y);
+    void graphicMove(Graphics* graphics, int del_x, int del_y);
     Painter* getNewGroup();
     void setSelectedGraphicDescription(string description);
+    void clearAll();
 
     //used by commands
     void addGraphices(Graphics* g);
@@ -40,13 +40,14 @@ public:
     void recoverGraphic(int index);
     void graphicMove(string description, int del_x, int del_y);
 private:
-    //Graphics* graphics;
+    Graphics* findGroupFromTrashcan(string description);
     vector<Graphics*> graphics;
     CommandManager cmdMgr;
     int x, y;
     stack<Graphics*> trashcan;
     stack<string> updateDescriptions;
     string curGraphicDescription;
+    vector<Graphics*> groupTrashcan;
 };
 
 #endif // MODEL_H_INCLUDED

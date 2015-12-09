@@ -17,8 +17,8 @@
 #define EQUAL 0
 
 Model::Model(){
-    x=-100;
-    y=-100;
+    x=0;
+    y=0;
 }
 void Model::loadFile(string fileName){
     GraphicsFactory gf;
@@ -41,8 +41,6 @@ vector<Painter*> Model::getShapes(){
     for(int i=0 ; i<graphics.size() ; i++)
         graphics.at(i)->accept(visitor);
     return visitor.getPainters();
-
-    //return visitor.getPainter();
 }
 
 void Model::actCreateSquare(){
@@ -76,17 +74,6 @@ void Model::actUndo(){
 void Model::actRedo(){
     cmdMgr.redo();
 }
-/*
-void Model::actOmit(string description){
-    int index=0;
-    for(auto g : graphics){
-        if(description.compare(g->description()) == EQUAL){
-            cmdMgr.execute(new DeleteCommand(this, index));
-            break;
-        }
-        index++;
-    }
-}*/
 
 void Model::actOmit(){
     cout << "+" << curGraphicDescription <<endl;
@@ -103,15 +90,6 @@ void Model::actOmit(){
 void Model::actGroup(vector<string> descriptions){
     cmdMgr.execute(new GroupCommand(this, descriptions));
 }
-/*
-void Model::actUngroup(string description){
-    for(auto g : graphics){
-        if(description.compare(g->description()) == EQUAL){
-            cmdMgr.execute(new UngroupCommand(this, description, g->getChildren().size()));
-            break;
-        }
-    }
-}*/
 void Model::actUngroup(){
     for(auto g : graphics){
         if(curGraphicDescription.compare(g->description()) == EQUAL){
@@ -122,7 +100,11 @@ void Model::actUngroup(){
 }
 
 void Model::actMove(int del_x, int del_y){
-    cmdMgr.execute(new MoveCommand(this, curGraphicDescription, del_x, del_y));
+    for(auto g : graphics){
+        if(curGraphicDescription.compare(g->description()) == EQUAL){
+            cmdMgr.execute(new MoveCommand(this, g, del_x, del_y));
+        }
+    }
 }
 
 void Model::groupGraphis(vector<string> descriptions){
@@ -145,7 +127,15 @@ void Model::groupGraphis(vector<string> descriptions){
         for(auto child : children){
             cg->add(child);
         }
-        graphics.push_back(cg);
+        Graphics* oldGroup = findGroupFromTrashcan(cg->description());
+        //graphics.push_back(cg);
+        if(oldGroup == NULL){
+            cout << "NULL" << endl;
+            groupTrashcan.push_back(cg);
+        }else{
+            cout << "Not NULL" <<endl;
+        }
+        graphics.push_back(oldGroup == NULL ? cg : oldGroup);
     }
 }
 
@@ -162,7 +152,6 @@ void Model::ungroupGraphics(Graphics* g){
     if(g == NULL){
         children = graphics.back()->getChildren();
         graphics.erase(graphics.end()-1);
-        cout << "undo" << endl;
     }else{
         children = g->getChildren();
         vector<Graphics*>::iterator it = graphics.begin();
@@ -174,8 +163,11 @@ void Model::ungroupGraphics(Graphics* g){
             it++;
         }
     }
-    for(auto child : children){
-        graphics.push_back(child);
+    vector<Graphics*>::iterator it = children.end()-1;
+    while(it >= children.begin()){
+        cout << (*it)->description() << endl;
+        graphics.push_back(*it);
+        it--;
     }
 }
 
@@ -203,7 +195,6 @@ void Model::unexecuteUngroup(int childNum){
 void Model::deleteGraphic(int index){
     Graphics* g = (*(graphics.begin()+index));
     graphics.erase(graphics.begin()+index);
-    cout <<"cur graphics size: " << graphics.size();
     trashcan.push(g);
 }
 
@@ -213,20 +204,29 @@ void Model::recoverGraphic(int index){
     trashcan.pop();
 }
 
-void Model::graphicMove(string description, int del_x, int del_y){
-    if(description == ""){
-        description = updateDescriptions.top();
-        updateDescriptions.pop();
-    }
-    for(auto g : graphics){
-        if(description.compare(g->description()) == EQUAL){
-            g->changePoint(del_x, del_y);
-            updateDescriptions.push(g->description());
-            break;
-        }
-    }
+void Model::graphicMove(Graphics* graphics, int del_x, int del_y){
+    graphics->changePoint(del_x, del_y);
+    updateDescriptions.push(graphics->description());
 }
 
 void Model::setSelectedGraphicDescription(string description){
     this->curGraphicDescription = description;
+}
+
+Graphics* Model::findGroupFromTrashcan(string description){
+    for(auto g : groupTrashcan){
+        if(description.compare(g->description()) == EQUAL){
+            return g;
+        }
+    }
+    return 0;
+}
+
+void Model::clearAll(){
+    cmdMgr.~CommandManager();
+    while(!trashcan.empty())
+        trashcan.pop();
+    groupTrashcan.clear();
+    while(!updateDescriptions.empty())
+        updateDescriptions.pop();
 }

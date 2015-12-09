@@ -26,6 +26,7 @@ public:
     void graphicPointChange(int del_x, int del_y);
     void setDrag(bool flag);
     void setSelectedGraphicDescription(string description);
+    void clearAll();
 private:
     Model* m;
     string curGraphicDescription;

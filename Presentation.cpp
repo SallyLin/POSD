@@ -35,7 +35,8 @@ void Presentation::undo(){
 }
 
 void Presentation::group(vector<string> descriptions){
-    m->actGroup(descriptions);
+    if(!isDrag)
+        m->actGroup(descriptions);
 }
 
 Painter* Presentation::getNewGroup(){
@@ -46,7 +47,8 @@ void Presentation::ungroup(string description){
     m->actUngroup(description);
 }*/
 void Presentation::ungroup(){
-    m->actUngroup();
+    if(!isDrag)
+        m->actUngroup();
 }
 /*
 void Presentation::omit(string description){
@@ -54,7 +56,8 @@ void Presentation::omit(string description){
 }*/
 
 void Presentation::omit(){
-    m->actOmit();
+    if(!isDrag)
+        m->actOmit();
 }
 
 void Presentation::graphicPointChange(int del_x, int del_y){
@@ -70,4 +73,8 @@ void Presentation::setDrag(bool flag){
 
 void Presentation::setSelectedGraphicDescription(string description){
     m->setSelectedGraphicDescription(description);
+}
+
+void Presentation::clearAll(){
+    m->clearAll();
 }

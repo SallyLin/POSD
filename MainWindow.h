@@ -12,6 +12,9 @@ class MainWindow : public QMainWindow{
     Q_OBJECT
 public:
     MainWindow(Presentation* presentation);
+    void graphicPointChange(int del_x, int del_y);
+    void setDrag(bool flag);
+    void setSelectedGraphicDescription(string description);
 
 protected:
     QWidget *widget;
