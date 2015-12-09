@@ -59,3 +59,9 @@ std::string CompositeGraphics::description(){
 vector<Graphics*> CompositeGraphics::getChildren(){
     return this->g_obj;
 }
+
+void CompositeGraphics::changePoint(int del_x, int del_y){
+    for(auto g : g_obj){
+        g->changePoint(del_x, del_y);
+    }
+}

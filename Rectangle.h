@@ -14,6 +14,7 @@ public:
     int ury() const{return y+w;}
     std::string describe();
     Painter* getPainter();
+    void changePoint(int del_x, int del_y);
 
     //int perimeter();
 private:

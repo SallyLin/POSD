@@ -19,3 +19,8 @@ Painter* Circle::getPainter(){
     CirclePainter* cp = new CirclePainter(x, y, radius, describe());
     return cp;
 }
+
+void Circle::changePoint(int del_x, int del_y){
+    cx += del_x;
+    cy += del_y;
+}

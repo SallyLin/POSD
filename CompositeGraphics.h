@@ -14,6 +14,7 @@ public:
     Painter* getPainter();
     std::string description();
     vector<Graphics*> getChildren();
+    void changePoint(int del_x, int del_y);
 private:
     std::vector<Graphics *> g_obj;
 };

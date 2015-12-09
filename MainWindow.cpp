@@ -168,9 +168,12 @@ void MainWindow::aboutDeveloper(){
 }
 
 void MainWindow::drawShapes(){
+    //cout << "update scene" << endl;
     scene->clear();
     vector<Painter*> shapes = p->getShapes();
     for (auto s:shapes){
+        s->setPresentation(p);
+        cout << s->description() << endl;
         scene->addItem(s);
     }
     scene->update();
@@ -210,12 +213,16 @@ void MainWindow::redo(){
 }
 
 void MainWindow::omit(){
+    p->omit();
+    drawShapes();
+    //Original
+    /*
     QList<QGraphicsItem*> selectedList = scene->selectedItems();
     Painter* group = static_cast<Painter*>(selectedList.front());
     string description = group->description();
     p->omit(description);
     scene->removeItem(selectedList.back());
-    scene->update();
+    scene->update();*/
 }
 
 void MainWindow::group(){
@@ -228,13 +235,17 @@ void MainWindow::group(){
             descriptions.push_back(painter->description());
         }
         p->group(descriptions);
-        p->getNewGroup();
-        scene->addItem(p->getNewGroup());
+        Painter* group = p->getNewGroup();
+        group->setPresentation(p);
+        scene->addItem(group);
         scene->update();
     }
 }
 
 void MainWindow::ungroup(){
+    p->ungroup();
+    drawShapes();
+    /*
     QList<QGraphicsItem*> selectedList = scene->selectedItems();
     Painter* group = static_cast<Painter*>(selectedList.front());
     vector<Painter*> children = group->getChildren();
@@ -246,5 +257,5 @@ void MainWindow::ungroup(){
             scene->addItem(child);
         }
         scene->update();
-    }
+    }*/
 }

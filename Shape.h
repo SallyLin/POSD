@@ -10,6 +10,7 @@ public:
     virtual Rectangle getBoundingBox()=0;
     virtual std::string describe() {return std::string("");}
     virtual Painter* getPainter(){return new Painter(); }
+    virtual void changePoint(int del_x, int del_y){}
 };
 
 

@@ -9,6 +9,7 @@ public:
     Rectangle getBoundingBox();
     std::string describe();
     Painter* getPainter();
+    void changePoint(int del_x, int del_y);
 private:
     int x, y;
     int l;

@@ -1,5 +1,6 @@
 #include "Painter.h"
-#include "MainWindow.h"
+#include "Presentation.h"
+#include <QGraphicsSceneMouseEvent>
 Painter::Painter(){
     pen.setColor("blue");
     setFlags(QGraphicsItemGroup::ItemIsSelectable | QGraphicsItemGroup::ItemIsMovable);
@@ -18,8 +19,8 @@ void Painter::green(){
     update();
 }
 
-void Painter::setWindow(MainWindow *window){
-    this->w = window;
+void Painter::setPresentation(Presentation *presentation){
+    this->p = presentation;
 }
 
 std::string Painter::description(){
@@ -37,4 +38,32 @@ void Painter::addChild(Painter* child){
 
 vector<Painter*> Painter::getChildren(){
     return this->children;
+}
+
+void Painter::mousePressEvent(QGraphicsSceneMouseEvent* event){
+    event->setAccepted(true);
+    pre_x = px;
+    pre_y = py;
+    dragStart = event->pos();
+    p->setSelectedGraphicDescription(description());
+    //cout << description();
+    //std::cout << px << ", " << py << endl;
+}
+
+void Painter::mouseMoveEvent(QGraphicsSceneMouseEvent* event){
+    event->setAccepted(false);
+    p->setDrag(true);
+    QPointF pNew = event->pos();
+    location += (pNew - dragStart);
+    this->setPos(location);
+}
+
+void Painter::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
+    event->setAccepted(true);
+    QPointF delPoint = location - dragStart;
+    int del_x = static_cast<int>(delPoint.x());
+    int del_y = static_cast<int>(delPoint.y());
+    p->graphicPointChange(del_x, del_y);
+    //std::cout << delPoint.x() << ", " << delPoint.y() << endl;
+    //std::cout << px+delPoint.x() << ", " << py+delPoint.y() << endl;
 }

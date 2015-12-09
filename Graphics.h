@@ -13,6 +13,7 @@ public:
     virtual Painter* getPainter();
     virtual std::string description();
     virtual vector<Graphics*> getChildren();
+    virtual void changePoint(int del_x, int del_y);
 protected:
     Graphics();
 };

@@ -11,3 +11,4 @@ Graphics::~Graphics(){}
 Painter* Graphics::getPainter(){return new Painter(); }
 std::string Graphics::description(){ return std::string(""); }
 vector<Graphics*> Graphics::getChildren() {throw std::string("No children");}
+void Graphics::changePoint(int del_x, int del_y){}

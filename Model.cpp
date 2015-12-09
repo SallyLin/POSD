@@ -11,6 +11,7 @@
 #include "GroupCommand.h"
 #include "UngroupCommand.h"
 #include "DeleteCommand.h"
+#include "MoveCommand.h"
 
 #define NULL 0
 #define EQUAL 0
@@ -75,11 +76,23 @@ void Model::actUndo(){
 void Model::actRedo(){
     cmdMgr.redo();
 }
-
+/*
 void Model::actOmit(string description){
     int index=0;
     for(auto g : graphics){
         if(description.compare(g->description()) == EQUAL){
+            cmdMgr.execute(new DeleteCommand(this, index));
+            break;
+        }
+        index++;
+    }
+}*/
+
+void Model::actOmit(){
+    cout << "+" << curGraphicDescription <<endl;
+    int index=0;
+    for(auto g : graphics){
+        if(curGraphicDescription.compare(g->description()) == EQUAL){
             cmdMgr.execute(new DeleteCommand(this, index));
             break;
         }
@@ -90,7 +103,7 @@ void Model::actOmit(string description){
 void Model::actGroup(vector<string> descriptions){
     cmdMgr.execute(new GroupCommand(this, descriptions));
 }
-
+/*
 void Model::actUngroup(string description){
     for(auto g : graphics){
         if(description.compare(g->description()) == EQUAL){
@@ -98,6 +111,18 @@ void Model::actUngroup(string description){
             break;
         }
     }
+}*/
+void Model::actUngroup(){
+    for(auto g : graphics){
+        if(curGraphicDescription.compare(g->description()) == EQUAL){
+            cmdMgr.execute(new UngroupCommand(this, curGraphicDescription, g->getChildren().size()));
+            break;
+        }
+    }
+}
+
+void Model::actMove(int del_x, int del_y){
+    cmdMgr.execute(new MoveCommand(this, curGraphicDescription, del_x, del_y));
 }
 
 void Model::groupGraphis(vector<string> descriptions){
@@ -178,6 +203,7 @@ void Model::unexecuteUngroup(int childNum){
 void Model::deleteGraphic(int index){
     Graphics* g = (*(graphics.begin()+index));
     graphics.erase(graphics.begin()+index);
+    cout <<"cur graphics size: " << graphics.size();
     trashcan.push(g);
 }
 
@@ -185,4 +211,22 @@ void Model::recoverGraphic(int index){
     Graphics* g = trashcan.top();
     graphics.insert(graphics.begin()+index, g);
     trashcan.pop();
+}
+
+void Model::graphicMove(string description, int del_x, int del_y){
+    if(description == ""){
+        description = updateDescriptions.top();
+        updateDescriptions.pop();
+    }
+    for(auto g : graphics){
+        if(description.compare(g->description()) == EQUAL){
+            g->changePoint(del_x, del_y);
+            updateDescriptions.push(g->description());
+            break;
+        }
+    }
+}
+
+void Model::setSelectedGraphicDescription(string description){
+    this->curGraphicDescription = description;
 }

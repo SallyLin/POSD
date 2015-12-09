@@ -18,3 +18,8 @@ Painter* Square::getPainter(){
     SquarePainter* sp = new SquarePainter(rx, ry, length, describe());
     return sp;
 }
+
+void Square::changePoint(int del_x, int del_y){
+    x += del_x;
+    y += del_y;
+}

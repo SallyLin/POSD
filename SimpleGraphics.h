@@ -14,6 +14,7 @@ public:
     Shape * shape();
     Painter* getPainter();
     std::string description();
+    void changePoint(int del_x, int del_y);
 private:
     Shape * s;
 };

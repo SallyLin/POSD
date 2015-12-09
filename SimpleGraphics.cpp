@@ -13,3 +13,7 @@ Painter* SimpleGraphics::getPainter(){
 std::string SimpleGraphics::description(){
     return s->describe();
 }
+
+void SimpleGraphics::changePoint(int del_x, int del_y){
+    s->changePoint(del_x, del_y);
+}

@@ -17,3 +17,8 @@ Painter* Rectangle::getPainter(){
     RectanglePainter* rp = new RectanglePainter(rx, ry, length, width, describe());
     return rp;
 }
+
+void Rectangle::changePoint(int del_x, int del_y){
+    x += del_x;
+    y += del_y;
+}

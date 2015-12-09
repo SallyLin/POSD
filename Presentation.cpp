@@ -1,6 +1,6 @@
 #include "Presentation.h"
 
-Presentation::Presentation(Model* model):m(model){}
+Presentation::Presentation(Model* model):m(model){ isDrag=false; }
 
 string Presentation::getAllDescription(){
     return m->getAllDescription();
@@ -39,13 +39,35 @@ void Presentation::group(vector<string> descriptions){
 }
 
 Painter* Presentation::getNewGroup(){
-    m->getNewGroup();
+    return m->getNewGroup();
 }
-
+/*
 void Presentation::ungroup(string description){
     m->actUngroup(description);
+}*/
+void Presentation::ungroup(){
+    m->actUngroup();
 }
-
+/*
 void Presentation::omit(string description){
     m->actOmit(description);
+}*/
+
+void Presentation::omit(){
+    m->actOmit();
+}
+
+void Presentation::graphicPointChange(int del_x, int del_y){
+    if(isDrag){
+        m->actMove(del_x, del_y);
+        isDrag = false;
+    }
+}
+
+void Presentation::setDrag(bool flag){
+    this->isDrag = flag;
+}
+
+void Presentation::setSelectedGraphicDescription(string description){
+    m->setSelectedGraphicDescription(description);
 }
