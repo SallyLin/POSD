@@ -1752,7 +1752,7 @@
 1449585569 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449637491 d:\git\posd\painter.h
+1449679720 d:\git\posd\painter.h
 	<QGraphicsItemGroup>
 	<QPen>
 	<vector>
@@ -1903,7 +1903,7 @@
 	"MainWindow.h"
 	"Model.h"
 
-1449647510 d:\git\posd\mainwindow.h
+1449675873 d:\git\posd\mainwindow.h
 	<QtWidgets/QMainWindow>
 	<QWidget>
 	<QMenu>
@@ -1912,7 +1912,7 @@
 	<QGraphicsScene>
 	"Presentation.h"
 
-1449667920 d:\git\posd\model.h
+1449680711 d:\git\posd\model.h
 	"CommandManager.h"
 	"Graphics.h"
 	<string>
@@ -1920,7 +1920,7 @@
 	<QPainter>
 	<stack>
 
-1449668196 source:d:\git\posd\mainwindow.cpp
+1449679472 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -1931,7 +1931,7 @@
 	<vector>
 	<string>
 
-1449498458 d:\git\posd\mainwindow.moc
+1449669638 d:\git\posd\mainwindow.moc
 	"MainWindow.h"
 	<QtCore/qbytearray.h>
 	<QtCore/qmetatype.h>
@@ -1944,7 +1944,7 @@
 1449498458 d:\git\posd\mainwindowa.h
 	"MainWindow.h"
 
-1449659623 source:d:\git\posd\model.cpp
+1449681556 source:d:\git\posd\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -1966,7 +1966,7 @@
 	<vector>
 	<stack>
 
-1449648700 source:d:\git\posd\painter.cpp
+1449681983 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"Presentation.h"
 	"MainWindow.h"
@@ -2027,11 +2027,12 @@
 
 1449498458 d:\git\posd\command.h
 
-1449668321 source:d:\git\posd\commandmanager.cpp
+1449680502 source:d:\git\posd\commandmanager.cpp
 	"CommandManager.h"
 	<string>
+	<iostream>
 
-1449498458 d:\git\posd\commandmanager.h
+1449674605 d:\git\posd\commandmanager.h
 	<stack>
 	"Command.h"
 
@@ -2069,7 +2070,7 @@
 1449498458 d:\git\posd\createrectanglecommand.h
 	"Command.h"
 
-1449668115 d:\git\posd\presentation.h
+1449679242 d:\git\posd\presentation.h
 	"Model.h"
 	<vector>
 	<string>
@@ -2378,7 +2379,7 @@
 	<stack>
 	<utility>
 
-1449628751 source:d:\git\posd\presentation.cpp
+1449681464 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist

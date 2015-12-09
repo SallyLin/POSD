@@ -12,6 +12,8 @@ public:
     void execute(Command* cmd);
     void redo();
     void undo();
+    bool isUndoEmpty();
+    bool isRedoEmpty();
 private:
     stack<Command*>undoCmds;
     stack<Command*>redoCmds;

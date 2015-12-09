@@ -15,6 +15,7 @@ public:
     void graphicPointChange(int del_x, int del_y);
     void setDrag(bool flag);
     void setSelectedGraphicDescription(string description);
+    void setSelectedGraphic(string description);
 
 protected:
     QWidget *widget;
@@ -33,6 +34,7 @@ protected:
     QAction *omitAct;
     QAction *groupAct;
     QAction *ungroupAct;
+    QAction *newFileAct;
     QGraphicsView *graphicsView;
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
@@ -44,7 +46,7 @@ private:
     void loadFile(QString fileName);
     void writeFile(QString fileName, QString data);
     void drawShapes();
-
+    void changeActionStatus();
     Presentation* p;
 
 private slots:
@@ -59,6 +61,7 @@ private slots:
     void omit();
     void group();
     void ungroup();
+    void newFile();
 };
 
 

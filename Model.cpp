@@ -19,6 +19,7 @@
 Model::Model(){
     x=0;
     y=0;
+    selectedGraphic=NULL;
 }
 void Model::loadFile(string fileName){
     GraphicsFactory gf;
@@ -60,10 +61,16 @@ void Model::actCreateRectangle(){
 }
 
 void Model::addGraphices(Graphics* g){
-    graphics.push_back(g);
+    Graphics* oldGraphic = findGraphicFromTrashcan(g->description());
+    if(oldGraphic == NULL){
+        graphics.push_back(g);
+    }else{
+        graphics.push_back(oldGraphic);
+    }
 }
 
 void Model::deleteLastGraphics(){
+    graphicTrashcan.push_back(graphics.back());
     graphics.pop_back();
 }
 
@@ -76,32 +83,36 @@ void Model::actRedo(){
 }
 
 void Model::actOmit(){
-    cout << "+" << curGraphicDescription <<endl;
+    //cout << "+" << curGraphicDescription <<endl;
     int index=0;
     for(auto g : graphics){
-        if(curGraphicDescription.compare(g->description()) == EQUAL){
+        if(selectedGraphic->description().compare(g->description()) == EQUAL){
             cmdMgr.execute(new DeleteCommand(this, index));
             break;
         }
         index++;
     }
+    selectedGraphic=NULL;
 }
 
 void Model::actGroup(vector<string> descriptions){
     cmdMgr.execute(new GroupCommand(this, descriptions));
 }
 void Model::actUngroup(){
-    for(auto g : graphics){
+
+    cmdMgr.execute(new UngroupCommand(this, selectedGraphic->description(), selectedGraphic->getChildren().size()));
+    selectedGraphic=NULL;
+    /*for(auto g : graphics){
         if(curGraphicDescription.compare(g->description()) == EQUAL){
             cmdMgr.execute(new UngroupCommand(this, curGraphicDescription, g->getChildren().size()));
             break;
         }
-    }
+    }*/
 }
 
 void Model::actMove(int del_x, int del_y){
     for(auto g : graphics){
-        if(curGraphicDescription.compare(g->description()) == EQUAL){
+        if(selectedGraphic->description().compare(g->description()) == EQUAL){
             cmdMgr.execute(new MoveCommand(this, g, del_x, del_y));
         }
     }
@@ -128,12 +139,8 @@ void Model::groupGraphis(vector<string> descriptions){
             cg->add(child);
         }
         Graphics* oldGroup = findGroupFromTrashcan(cg->description());
-        //graphics.push_back(cg);
         if(oldGroup == NULL){
-            cout << "NULL" << endl;
             groupTrashcan.push_back(cg);
-        }else{
-            cout << "Not NULL" <<endl;
         }
         graphics.push_back(oldGroup == NULL ? cg : oldGroup);
     }
@@ -208,18 +215,37 @@ void Model::graphicMove(Graphics* graphics, int del_x, int del_y){
     graphics->changePoint(del_x, del_y);
     updateDescriptions.push(graphics->description());
 }
-
+/*
 void Model::setSelectedGraphicDescription(string description){
     this->curGraphicDescription = description;
+}*/
+
+void Model::setSelectedGraphic(string description){
+    for(auto g : graphics){
+        if(description.compare(g->description()) == EQUAL){
+            selectedGraphic = g;
+            break;
+        }
+    }
 }
 
 Graphics* Model::findGroupFromTrashcan(string description){
+    vector<Graphics*>::iterator it;
     for(auto g : groupTrashcan){
         if(description.compare(g->description()) == EQUAL){
             return g;
         }
     }
-    return 0;
+    return NULL;
+}
+
+Graphics* Model::findGraphicFromTrashcan(string description){
+    for(auto g : graphicTrashcan){
+        if(description.compare(g->description()) == EQUAL){
+            return g;
+        }
+    }
+    return NULL;
 }
 
 void Model::clearAll(){
@@ -229,4 +255,33 @@ void Model::clearAll(){
     groupTrashcan.clear();
     while(!updateDescriptions.empty())
         updateDescriptions.pop();
+    graphics.clear();
+}
+
+bool Model::isUndoEnable(){
+    return !cmdMgr.isUndoEmpty();
+}
+
+bool Model::isRedoEnable(){
+    return !cmdMgr.isRedoEmpty();
+}
+
+bool Model::isGraphicSelected(){
+    return selectedGraphic != NULL;
+}
+
+bool Model::isGroup(){
+    if(selectedGraphic == NULL) return false;
+    try{
+        return !selectedGraphic->getChildren().empty();
+    }catch(string e){
+        return false;
+    }
+}
+
+bool Model::isSelected(string descripiton){
+    if(selectedGraphic != NULL)
+        return descripiton.compare(selectedGraphic->description()) == EQUAL;
+    else
+        return false;
 }

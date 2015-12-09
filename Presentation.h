@@ -25,11 +25,18 @@ public:
     Painter* getNewGroup();
     void graphicPointChange(int del_x, int del_y);
     void setDrag(bool flag);
-    void setSelectedGraphicDescription(string description);
+    //void setSelectedGraphicDescription(string description);
+    void setSelectedGraphic(string description);
     void clearAll();
+
+    //action status check
+    bool isUndoEnable();
+    bool isRedoEnable();
+    bool isGraphicSelected();
+    bool isGroup();
 private:
     Model* m;
-    string curGraphicDescription;
+    //string curGraphicDescription;
     bool isDrag;
 };
 

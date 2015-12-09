@@ -46,10 +46,12 @@ vector<Painter*> Painter::getChildren(){
 
 void Painter::mousePressEvent(QGraphicsSceneMouseEvent* event){
     QGraphicsItem::mousePressEvent(event);
+
     //event->setAccepted(true);
     dragStart = event->pos();
     prePoint = pos();
-    mw->setSelectedGraphicDescription(description());
+    //mw->setSelectedGraphicDescription(description());
+    mw->setSelectedGraphic(description());
     //std::cout << "press " << x() << ", " << y() << endl;
 }
 
@@ -81,4 +83,9 @@ void Painter::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
 
 void Painter::setPos(qreal x, qreal y){
     QGraphicsItem::setPos(x, y);
+}
+
+void Painter::selected(){
+    pen.setColor("red");
+    update();
 }

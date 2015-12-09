@@ -30,7 +30,7 @@ MainWindow::MainWindow(Presentation* presentation):p(presentation){
     createMenus();
     createToolBars();
     setMinimumSize(900, 800);
-
+    changeActionStatus();
 }
 
 void MainWindow::createAction(){
@@ -71,10 +71,14 @@ void MainWindow::createAction(){
 
     ungroupAct = new QAction(QIcon("images/ungroup.png"), tr("Ungroup"), this);
     connect(ungroupAct, SIGNAL(triggered()), this, SLOT(ungroup()));
+
+    newFileAct = new QAction(QIcon("images/new.png"), tr("New"), this);
+    connect(newFileAct, SIGNAL(triggered()), this, SLOT(newFile()));
 }
 
 void MainWindow::createMenus(){
     fileMenu = menuBar()->addMenu(tr("&File"));
+    fileMenu->addAction(newFileAct);
     fileMenu->addAction(loadFileAct);
     fileMenu->addAction(saveFileAct);
 
@@ -89,6 +93,7 @@ void MainWindow::createMenus(){
 
 void MainWindow::createToolBars(){
     fileToolBar = addToolBar(tr("File"));
+    fileToolBar->addAction(newFileAct);
     fileToolBar->addAction(loadFileAct);
     fileToolBar->addAction(saveFileAct);
 
@@ -108,6 +113,8 @@ void MainWindow::loadFile(){
     if (!fileName.isEmpty()){
         scene->clear();
         loadFile(fileName);
+        p->clearAll();
+        changeActionStatus();
     }
     p->clearAll();
 }
@@ -135,15 +142,16 @@ void MainWindow::saveFile(){
         string descriptions = p->getAllDescription();
 
         writeFile(files.at(0), QString::fromStdString(descriptions));
+        p->clearAll();
+        changeActionStatus();
+        QMessageBox msgbox;
+        std::string message("Save!!\n");
+        QString qstr = QString::fromStdString(message);
+        msgbox.setText(qstr);
+        msgbox.exec();
 	}catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
 	}
-    p->clearAll();
-	QMessageBox msgbox;
-    std::string message("Save!!\n");
-    QString qstr = QString::fromStdString(message);
-    msgbox.setText(qstr);
-    msgbox.exec();
 
 }
 
@@ -171,7 +179,6 @@ void MainWindow::aboutDeveloper(){
 }
 
 void MainWindow::drawShapes(){
-    //cout << "update scene" << endl;
     scene->clear();
     vector<Painter*> shapes = p->getShapes();
     for (auto s:shapes){
@@ -184,11 +191,13 @@ void MainWindow::drawShapes(){
 void MainWindow::createSquare(){
     p->createSquare();
     drawShapes();
+    changeActionStatus();
 }
 
 void MainWindow::createCircle(){
     p->createCircle();
     drawShapes();
+    changeActionStatus();
 }
 
 void MainWindow::createRectangle(){
@@ -200,6 +209,7 @@ void MainWindow::undo(){
     try{
         p->undo();
         drawShapes();
+        changeActionStatus();
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
 	}
@@ -209,6 +219,7 @@ void MainWindow::redo(){
     try{
         p->redo();
         drawShapes();
+        changeActionStatus();
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
 	}
@@ -217,14 +228,7 @@ void MainWindow::redo(){
 void MainWindow::omit(){
     p->omit();
     drawShapes();
-    //Original
-    /*
-    QList<QGraphicsItem*> selectedList = scene->selectedItems();
-    Painter* group = static_cast<Painter*>(selectedList.front());
-    string description = group->description();
-    p->omit(description);
-    scene->removeItem(selectedList.back());
-    scene->update();*/
+    changeActionStatus();
 }
 
 void MainWindow::group(){
@@ -237,41 +241,47 @@ void MainWindow::group(){
             descriptions.push_back(painter->description());
         }
         p->group(descriptions);
-        /*Painter* group = p->getNewGroup();
-        group->setPresentation(p);
-        scene->addItem(group);
-        scene->update();*/
         drawShapes();
+        changeActionStatus();
     }
 }
 
 void MainWindow::ungroup(){
     p->ungroup();
     drawShapes();
-    /*
-    QList<QGraphicsItem*> selectedList = scene->selectedItems();
-    Painter* group = static_cast<Painter*>(selectedList.front());
-    vector<Painter*> children = group->getChildren();
-    if(!children.empty()){
-        p->ungroup(group->description());
-        scene->removeItem(group);
+    changeActionStatus();
+}
 
-        for(auto child : children){
-            scene->addItem(child);
-        }
-        scene->update();
-    }*/
+void MainWindow::newFile(){
+    scene->clear();
+    p->clearAll();
+    changeActionStatus();
 }
 
 void MainWindow::graphicPointChange(int del_x, int del_y){
     p->graphicPointChange(del_x, del_y);
     drawShapes();
+    changeActionStatus();
 }
 
 void MainWindow::setDrag(bool flag){
     p->setDrag(flag);
 }
-
+/*
 void MainWindow::setSelectedGraphicDescription(string description){
     p->setSelectedGraphicDescription(description);
+}*/
+
+void MainWindow::setSelectedGraphic(string description){
+    p->setSelectedGraphic(description);
+    changeActionStatus();
+}
+
+void MainWindow::changeActionStatus(){
+    undoAct->setEnabled(p->isUndoEnable());
+    redoAct->setEnabled(p->isRedoEnable());
+    omitAct->setEnabled(p->isGraphicSelected());
+    //saveFileAct->setEnabled();
+    //groupAct->setEnabled(p->isGraphicSelected());
+    ungroupAct->setEnabled(p->isGraphicSelected() && p->isGroup());
 }

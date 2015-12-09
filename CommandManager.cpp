@@ -1,5 +1,6 @@
 #include "CommandManager.h"
 #include <string>
+#include <iostream>
 CommandManager::CommandManager(){}
 
 CommandManager::~CommandManager(){
@@ -41,4 +42,12 @@ void CommandManager::undo() {
 	undoCmds.pop();
 	c->unexecute(); // undo the command
 	redoCmds.push(c);
+}
+
+bool CommandManager::isUndoEmpty(){
+    return undoCmds.empty();
+}
+
+bool CommandManager::isRedoEmpty(){
+    return redoCmds.empty();
 }

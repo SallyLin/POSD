@@ -7,7 +7,12 @@ string Presentation::getAllDescription(){
 }
 
 vector<Painter*> Presentation::getShapes(){
-    return m->getShapes();
+    vector<Painter*> painters = m->getShapes();
+    for(auto p : painters){
+        if(m->isSelected(p->description()))
+            p->selected();
+    }
+    return painters;
 }
 
 void Presentation::loadFile(string filename){
@@ -60,6 +65,22 @@ void Presentation::omit(){
         m->actOmit();
 }
 
+bool Presentation::isUndoEnable(){
+   return m->isUndoEnable();
+}
+
+bool Presentation::isRedoEnable(){
+    return m->isRedoEnable();
+}
+
+bool Presentation::isGraphicSelected(){
+    return m->isGraphicSelected();
+}
+
+bool Presentation::isGroup(){
+    return m->isGroup();
+}
+
 void Presentation::graphicPointChange(int del_x, int del_y){
     if(isDrag){
         m->actMove(del_x, del_y);
@@ -70,9 +91,12 @@ void Presentation::graphicPointChange(int del_x, int del_y){
 void Presentation::setDrag(bool flag){
     this->isDrag = flag;
 }
-
+/*
 void Presentation::setSelectedGraphicDescription(string description){
     m->setSelectedGraphicDescription(description);
+}*/
+void Presentation::setSelectedGraphic(string description){
+    m->setSelectedGraphic(description);
 }
 
 void Presentation::clearAll(){

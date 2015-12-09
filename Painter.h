@@ -24,6 +24,7 @@ public:
     void setDescription(std::string content);
     void green();
     void setPos(qreal x, qreal y);
+    void selected();
 
     //event
     void mousePressEvent(QGraphicsSceneMouseEvent* event);
