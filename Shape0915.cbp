@@ -100,8 +100,6 @@
 		<Unit filename="GroupCommand.h" />
 		<Unit filename="MainWindow.cpp" />
 		<Unit filename="MainWindow.h" />
-		<Unit filename="MainWindowA.cpp" />
-		<Unit filename="MainWindowA.h" />
 		<Unit filename="Model.cpp" />
 		<Unit filename="Model.h" />
 		<Unit filename="MoveCommand.cpp" />

@@ -112,17 +112,19 @@ void MainWindow::loadFile(){
     QString fileName = QFileDialog::getOpenFileName(this);
     if (!fileName.isEmpty()){
         scene->clear();
-        loadFile(fileName);
         p->clearAll();
+        loadFile(fileName);
+
+        drawShapes();
         changeActionStatus();
     }
-    p->clearAll();
+    //p->clearAll();
 }
 
 void MainWindow::loadFile(QString fileName){
     try{
         p->loadFile(fileName.toStdString());
-        drawShapes();
+
     }catch(string e){
         QMessageBox::information(this, tr("Warning"), tr(e.c_str()));
     }

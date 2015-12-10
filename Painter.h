@@ -33,7 +33,7 @@ public:
 protected:
     qreal px, py;
     QPointF prePoint;
-    QPointF dragStart;
+    //QPointF dragStart;
     QPointF location;
     QPen pen;
     Presentation *p;

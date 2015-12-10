@@ -1752,7 +1752,7 @@
 1449585569 d:\git\posd\graphics.h
 	"Painter.h"
 
-1449679720 d:\git\posd\painter.h
+1449710010 d:\git\posd\painter.h
 	<QGraphicsItemGroup>
 	<QPen>
 	<vector>
@@ -1920,7 +1920,7 @@
 	<QPainter>
 	<stack>
 
-1449679472 source:d:\git\posd\mainwindow.cpp
+1449739692 source:d:\git\posd\mainwindow.cpp
 	"MainWindow.moc"
 	<QtWidgets>
 	<iostream>
@@ -1944,7 +1944,7 @@
 1449498458 d:\git\posd\mainwindowa.h
 	"MainWindow.h"
 
-1449681556 source:d:\git\posd\model.cpp
+1449740320 source:d:\git\posd\model.cpp
 	"Model.h"
 	"GraphicsFactory.h"
 	"Graphics.h"
@@ -1966,7 +1966,7 @@
 	<vector>
 	<stack>
 
-1449681983 source:d:\git\posd\painter.cpp
+1449710827 source:d:\git\posd\painter.cpp
 	"Painter.h"
 	"Presentation.h"
 	"MainWindow.h"
@@ -2379,7 +2379,7 @@
 	<stack>
 	<utility>
 
-1449681464 source:d:\git\posd\presentation.cpp
+1449710550 source:d:\git\posd\presentation.cpp
 	"Presentation.h"
 
 1434474322 c:\qt\qt5.5.0\5.5\mingw492_32\include\qtcore\qlist

@@ -47,18 +47,11 @@ void Presentation::group(vector<string> descriptions){
 Painter* Presentation::getNewGroup(){
     return m->getNewGroup();
 }
-/*
-void Presentation::ungroup(string description){
-    m->actUngroup(description);
-}*/
+
 void Presentation::ungroup(){
     if(!isDrag)
         m->actUngroup();
 }
-/*
-void Presentation::omit(string description){
-    m->actOmit(description);
-}*/
 
 void Presentation::omit(){
     if(!isDrag)
@@ -91,10 +84,7 @@ void Presentation::graphicPointChange(int del_x, int del_y){
 void Presentation::setDrag(bool flag){
     this->isDrag = flag;
 }
-/*
-void Presentation::setSelectedGraphicDescription(string description){
-    m->setSelectedGraphicDescription(description);
-}*/
+
 void Presentation::setSelectedGraphic(string description){
     m->setSelectedGraphic(description);
 }

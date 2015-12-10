@@ -25,22 +25,24 @@ void Model::loadFile(string fileName){
     GraphicsFactory gf;
     graphics = gf.buildGraphicsFromFile(fileName.c_str());
     DescriptionVisitor dv;
-    for(int i=0 ; i<graphics.size() ; i++)
-        graphics.at(i)->accept(dv);
+    for(auto g : graphics)
+        g->accept(dv);
 }
 
 string Model::getAllDescription(){
     DescriptionVisitor visitor;
-    for(int i=0 ; i<graphics.size() ; i++)
-        graphics.at(i)->accept(visitor);
+    for(auto g : graphics){
+        g->accept(visitor);
+    }
     string des = visitor.getDescription();
     return des;
 }
 
 vector<Painter*> Model::getShapes(){
     ShapeVisitor visitor;
-    for(int i=0 ; i<graphics.size() ; i++)
-        graphics.at(i)->accept(visitor);
+    for(auto g : graphics){
+        g->accept(visitor);
+    }
     return visitor.getPainters();
 }
 
@@ -76,14 +78,15 @@ void Model::deleteLastGraphics(){
 
 void Model::actUndo(){
     cmdMgr.undo();
+    selectedGraphic=NULL;
 }
 
 void Model::actRedo(){
     cmdMgr.redo();
+    selectedGraphic=NULL;
 }
 
 void Model::actOmit(){
-    //cout << "+" << curGraphicDescription <<endl;
     int index=0;
     for(auto g : graphics){
         if(selectedGraphic->description().compare(g->description()) == EQUAL){
@@ -97,17 +100,12 @@ void Model::actOmit(){
 
 void Model::actGroup(vector<string> descriptions){
     cmdMgr.execute(new GroupCommand(this, descriptions));
+    selectedGraphic=NULL;
 }
 void Model::actUngroup(){
 
     cmdMgr.execute(new UngroupCommand(this, selectedGraphic->description(), selectedGraphic->getChildren().size()));
     selectedGraphic=NULL;
-    /*for(auto g : graphics){
-        if(curGraphicDescription.compare(g->description()) == EQUAL){
-            cmdMgr.execute(new UngroupCommand(this, curGraphicDescription, g->getChildren().size()));
-            break;
-        }
-    }*/
 }
 
 void Model::actMove(int del_x, int del_y){
@@ -211,14 +209,10 @@ void Model::recoverGraphic(int index){
     trashcan.pop();
 }
 
-void Model::graphicMove(Graphics* graphics, int del_x, int del_y){
-    graphics->changePoint(del_x, del_y);
-    updateDescriptions.push(graphics->description());
+void Model::graphicMove(Graphics* graphic, int del_x, int del_y){
+    graphic->changePoint(del_x, del_y);
+    updateDescriptions.push(graphic->description());
 }
-/*
-void Model::setSelectedGraphicDescription(string description){
-    this->curGraphicDescription = description;
-}*/
 
 void Model::setSelectedGraphic(string description){
     for(auto g : graphics){
