@@ -33,6 +33,10 @@ MainWindow::MainWindow(Presentation* presentation):p(presentation){
     changeActionStatus();
 }
 
+MainWindow::~MainWindow(){
+    p->clearAll();
+}
+
 void MainWindow::createAction(){
     loadFileAct = new QAction(QIcon("images/open.png"),tr("&Load File"), this);
     loadFileAct->setShortcuts(QKeySequence::Open);
@@ -74,6 +78,12 @@ void MainWindow::createAction(){
 
     newFileAct = new QAction(QIcon("images/new.png"), tr("New"), this);
     connect(newFileAct, SIGNAL(triggered()), this, SLOT(newFile()));
+
+    upperLayerAct = new QAction(QIcon("images/top.png"), tr("Move upper layer"), this);
+    connect(upperLayerAct, SIGNAL(triggered()), this, SLOT(moveUpperLayer()));
+
+    lowerLayerAct = new QAction(QIcon("images/bottom.png"), tr("Move lower layer"), this);
+    connect(lowerLayerAct, SIGNAL(triggered()), this, SLOT(moveLowerLayer()));
 }
 
 void MainWindow::createMenus(){
@@ -106,6 +116,8 @@ void MainWindow::createToolBars(){
     editToolBar->addAction(rectangleAct);
     editToolBar->addAction(groupAct);
     editToolBar->addAction(ungroupAct);
+    editToolBar->addAction(upperLayerAct);
+    editToolBar->addAction(lowerLayerAct);
 }
 
 void MainWindow::loadFile(){
@@ -118,7 +130,6 @@ void MainWindow::loadFile(){
         drawShapes();
         changeActionStatus();
     }
-    //p->clearAll();
 }
 
 void MainWindow::loadFile(QString fileName){
@@ -144,7 +155,7 @@ void MainWindow::saveFile(){
         string descriptions = p->getAllDescription();
 
         writeFile(files.at(0), QString::fromStdString(descriptions));
-        p->clearAll();
+        p->clearCmds();
         changeActionStatus();
         QMessageBox msgbox;
         std::string message("Save!!\n");
@@ -183,9 +194,11 @@ void MainWindow::aboutDeveloper(){
 void MainWindow::drawShapes(){
     scene->clear();
     vector<Painter*> shapes = p->getShapes();
-    for (auto s:shapes){
-        s->setWindow(this);
-        scene->addItem(s);
+    if(!shapes.empty()){
+        for (auto s:shapes){
+            s->setWindow(this);
+            scene->addItem(s);
+        }
     }
     scene->update();
 }
@@ -260,6 +273,18 @@ void MainWindow::newFile(){
     changeActionStatus();
 }
 
+void MainWindow::moveUpperLayer(){
+    p->moveUpperLayer();
+    drawShapes();
+    changeActionStatus();
+}
+
+void MainWindow::moveLowerLayer(){
+    p->moveLowerLayer();
+    drawShapes();
+    changeActionStatus();
+}
+
 void MainWindow::graphicPointChange(int del_x, int del_y){
     p->graphicPointChange(del_x, del_y);
     drawShapes();
@@ -283,7 +308,12 @@ void MainWindow::changeActionStatus(){
     undoAct->setEnabled(p->isUndoEnable());
     redoAct->setEnabled(p->isRedoEnable());
     omitAct->setEnabled(p->isGraphicSelected());
-    //saveFileAct->setEnabled();
-    //groupAct->setEnabled(p->isGraphicSelected());
     ungroupAct->setEnabled(p->isGraphicSelected() && p->isGroup());
+    upperLayerAct->setEnabled(p->isGraphicSelected());
+    lowerLayerAct->setEnabled(p->isGraphicSelected());
+}
+
+void MainWindow::setSelectedGraphicByMousePoint(int x, int y){
+    p->setSelectedGraphicByMousePoint(x, y);
+    drawShapes();
 }

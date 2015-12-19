@@ -3,6 +3,7 @@
 #include <sstream>
 #include "CirclePainter.h"
 const int PI=3;
+#define IS_IN_CIRCLE (x+cx)*(x+cx) + (y+cy)*(y+cy) <= r*r
 
 Circle::Circle(int center_x, int center_y, int radius)
     :cx(center_x),cy(center_y),r(radius) {}
@@ -23,4 +24,9 @@ Painter* Circle::getPainter(){
 void Circle::changePoint(int del_x, int del_y){
     cx += del_x;
     cy += del_y;
+}
+
+bool Circle::isInArea(int x, int y){
+    // (x+cx)^2 + (y+cy)^2 <= r^2
+    return IS_IN_CIRCLE;
 }

@@ -1,5 +1,6 @@
 #include "CirclePainter.h"
 #include <QPainter>
+#include <QPainterPath>
 
 CirclePainter::CirclePainter(qreal cx, qreal cy, qreal radius, std::string description)
     :Painter(), r(radius){
@@ -15,6 +16,7 @@ QRectF CirclePainter::boundingRect() const{
 }
 
 void CirclePainter::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget){
+    painter->setBrush(color);
     painter->setPen(pen);
     painter->drawEllipse(QPointF(px,py), r, r);
 }

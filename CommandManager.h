@@ -14,6 +14,7 @@ public:
     void undo();
     bool isUndoEmpty();
     bool isRedoEmpty();
+    void clearAllStacks();
 private:
     stack<Command*>undoCmds;
     stack<Command*>redoCmds;

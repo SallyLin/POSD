@@ -12,6 +12,8 @@
 #include "UngroupCommand.h"
 #include "DeleteCommand.h"
 #include "MoveCommand.h"
+#include "MoveUpperLayerCommand.h"
+#include "MoveLowerLayerCommand.h"
 
 #define NULL 0
 #define EQUAL 0
@@ -19,7 +21,7 @@
 Model::Model(){
     x=0;
     y=0;
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 void Model::loadFile(string fileName){
     GraphicsFactory gf;
@@ -78,12 +80,12 @@ void Model::deleteLastGraphics(){
 
 void Model::actUndo(){
     cmdMgr.undo();
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 
 void Model::actRedo(){
     cmdMgr.redo();
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 
 void Model::actOmit(){
@@ -95,17 +97,17 @@ void Model::actOmit(){
         }
         index++;
     }
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 
 void Model::actGroup(vector<string> descriptions){
     cmdMgr.execute(new GroupCommand(this, descriptions));
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 void Model::actUngroup(){
 
     cmdMgr.execute(new UngroupCommand(this, selectedGraphic->description(), selectedGraphic->getChildren().size()));
-    selectedGraphic=NULL;
+    setSelectedItemNull();
 }
 
 void Model::actMove(int del_x, int del_y){
@@ -113,6 +115,20 @@ void Model::actMove(int del_x, int del_y){
         if(selectedGraphic->description().compare(g->description()) == EQUAL){
             cmdMgr.execute(new MoveCommand(this, g, del_x, del_y));
         }
+    }
+}
+
+void Model::actMoveUpperLayer(){
+    if(selectedChild != NULL && selectedGraphic != NULL && !isChildTopInChildren()){
+        cmdMgr.execute(new MoveUpperLayerCommand(this, selectedGraphic, selectedChild));
+        setSelectedItemNull();
+    }
+}
+
+void Model::actMoveLowerLayer(){
+    if(selectedChild != NULL && selectedGraphic != NULL && !isChildBottomInChildren()){
+        cmdMgr.execute(new MoveLowerLayerCommand(this, selectedGraphic, selectedChild));
+        setSelectedItemNull();
     }
 }
 
@@ -146,7 +162,6 @@ void Model::groupGraphis(vector<string> descriptions){
 
 Painter* Model::getNewGroup(){
     vector<Graphics*>::iterator it=graphics.end()-1;
-    cout << graphics.at((graphics.size()-1))->description() << endl;
     ShapeVisitor sv;
     (*it)->accept(sv);
     return sv.getPainters().at(0);
@@ -170,7 +185,6 @@ void Model::ungroupGraphics(Graphics* g){
     }
     vector<Graphics*>::iterator it = children.end()-1;
     while(it >= children.begin()){
-        cout << (*it)->description() << endl;
         graphics.push_back(*it);
         it--;
     }
@@ -243,13 +257,19 @@ Graphics* Model::findGraphicFromTrashcan(string description){
 }
 
 void Model::clearAll(){
-    cmdMgr.~CommandManager();
+    cmdMgr.clearAllStacks();
     while(!trashcan.empty())
         trashcan.pop();
     groupTrashcan.clear();
     while(!updateDescriptions.empty())
         updateDescriptions.pop();
     graphics.clear();
+    selectedChild=NULL;
+    selectedGraphic=NULL;
+}
+
+void Model::clearCmds(){
+    cmdMgr.clearAllStacks();
 }
 
 bool Model::isUndoEnable(){
@@ -274,8 +294,101 @@ bool Model::isGroup(){
 }
 
 bool Model::isSelected(string descripiton){
+    if(selectedGraphic != NULL &&
+       descripiton.compare(selectedGraphic->description()) == EQUAL){
+        return true;
+    }
+    if(selectedChild != NULL &&
+        descripiton.compare(selectedChild->description()) == EQUAL){
+        return true;
+    }
+    return false;
+}
+
+void Model::setSelectedGraphicByMousePoint(int x, int y){
+    try{
+        vector<Graphics*> children = selectedGraphic->getChildren();
+        for(auto child : children){
+            if(child->isInArea(x, y)){
+                selectedChild = child;
+                break;
+            }
+        }
+    }catch(string e){}
+}
+
+vector<string> Model::getSelctedGraphcisDescriptions(){
+    vector<string> descriptions;
     if(selectedGraphic != NULL)
-        return descripiton.compare(selectedGraphic->description()) == EQUAL;
-    else
-        return false;
+        descriptions.push_back(selectedGraphic->description());
+    if(selectedChild != NULL)
+        descriptions.push_back(selectedChild->description());
+    return descriptions;
+}
+
+void Model::graphicsMoveUpperLayer(Graphics* group, Graphics* groupChild){
+    vector<Graphics*> children = group->getChildren();
+    vector<Graphics*>::iterator it = children.begin();
+    string childDescription = groupChild->description();
+    int index=0;
+    for(auto child : children){
+        if(childDescription.compare(child->description()) == EQUAL){
+            if(index-1 >= 0){
+                children.erase(it+index);
+                children.insert(it+(index-1), groupChild);
+                break;
+            }
+        }
+        index++;
+    }
+
+    group->setChildren(children);
+}
+
+void Model::graphicsMoveLowerLayer(Graphics* group, Graphics* groupChild){
+    vector<Graphics*> children = group->getChildren();
+    vector<Graphics*>::iterator it = children.begin();
+    string childDescription = groupChild->description();
+    int index=0;
+    for(auto child : children){
+        if(childDescription.compare(child->description()) == EQUAL){
+            if(index+1 < children.size()){
+                children.erase(it+index);
+                children.insert(it+(index+1), groupChild);
+                break;
+            }
+        }
+        index++;
+    }
+
+    group->setChildren(children);
+}
+
+bool Model::isChildTopInChildren(){
+    vector<Graphics*> children = selectedGraphic->getChildren();
+    string childDescription = selectedChild->description();
+    int index=0;
+    for(auto child : children){
+        if(childDescription.compare(child->description()) == EQUAL)
+            break;
+        index++;
+    }
+    return index == 0;
+}
+
+bool Model::isChildBottomInChildren(){
+    vector<Graphics*> children = selectedGraphic->getChildren();
+    string childDescription = selectedChild->description();
+    int index=0;
+    for(auto child : children){
+        if(childDescription.compare(child->description()) == EQUAL)
+            break;
+        index++;
+    }
+    return index == (children.size()-1);
+}
+
+void Model::setSelectedItemNull(){
+    selectedChild=NULL;
+    selectedGraphic=NULL;
 }

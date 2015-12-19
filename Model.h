@@ -24,11 +24,16 @@ public:
     void actGroup(vector<string> descriptions);
     void actUngroup();
     void actMove(int del_x, int del_y);
+    void actMoveUpperLayer();
+    void actMoveLowerLayer();
     void graphicMove(Graphics* graphics, int del_x, int del_y);
     Painter* getNewGroup();
     //void setSelectedGraphicDescription(string description);
     void setSelectedGraphic(string descriptoin);
     void clearAll();
+    void clearCmds();
+    void setSelectedGraphicByMousePoint(int x, int y);
+    vector<string> getSelctedGraphcisDescriptions();
 
     //status check
     bool isUndoEnable();
@@ -47,11 +52,18 @@ public:
     void deleteGraphic(int index);
     void recoverGraphic(int index);
     void graphicMove(string description, int del_x, int del_y);
+    void graphicsMoveUpperLayer(Graphics* group, Graphics* groupChild);
+    void graphicsMoveLowerLayer(Graphics* group, Graphics* groupChild);
 
 private:
     Graphics* findGroupFromTrashcan(string description);
     Graphics* findGraphicFromTrashcan(string description);
+    bool isChildTopInChildren();
+    bool isChildBottomInChildren();
+    void setSelectedItemNull();
+
     Graphics* selectedGraphic;
+    Graphics* selectedChild;
     vector<Graphics*> graphics;
     CommandManager cmdMgr;
     int x, y;

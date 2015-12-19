@@ -17,3 +17,7 @@ std::string SimpleGraphics::description(){
 void SimpleGraphics::changePoint(int del_x, int del_y){
     s->changePoint(del_x, del_y);
 }
+
+bool SimpleGraphics::isInArea(int x, int y){
+    return s->isInArea(x, y);
+}

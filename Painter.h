@@ -4,6 +4,7 @@
 //#include <QGraphicsItem>
 #include <QGraphicsItemGroup>
 #include <QPen>
+#include <QBrush>
 #include <vector>
 
 using namespace std;
@@ -25,6 +26,8 @@ public:
     void green();
     void setPos(qreal x, qreal y);
     void selected();
+    void unselected();
+    void checkSelected(vector<string> descriptions);
 
     //event
     void mousePressEvent(QGraphicsSceneMouseEvent* event);
@@ -33,14 +36,14 @@ public:
 protected:
     qreal px, py;
     QPointF prePoint;
-    //QPointF dragStart;
     QPointF location;
     QPen pen;
+    QColor color;
     Presentation *p;
     MainWindow* mw;
     std::string des;
     vector<Painter*> children;
-    int _gridSpace;
+    bool isComposite;
 };
 
 

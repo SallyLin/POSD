@@ -51,3 +51,10 @@ bool CommandManager::isUndoEmpty(){
 bool CommandManager::isRedoEmpty(){
     return redoCmds.empty();
 }
+
+void CommandManager::clearAllStacks(){
+    while(!redoCmds.empty())
+        redoCmds.pop();
+    while(!undoCmds.empty())
+        undoCmds.pop();
+}

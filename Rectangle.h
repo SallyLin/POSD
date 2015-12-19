@@ -8,17 +8,18 @@ public:
     Rectangle(int ll_x, int ll_y, int length, int width);
     int area();
     Rectangle getBoundingBox();
-    int llx() const{return x;}
-    int lly() const{return y;}
-    int urx() const{return x+l;}
-    int ury() const{return y+w;}
+    int llx() const{return rx;}
+    int lly() const{return ry;}
+    int urx() const{return rx+l;}
+    int ury() const{return ry+w;}
     std::string describe();
     Painter* getPainter();
     void changePoint(int del_x, int del_y);
+    bool isInArea(int x, int y);
 
     //int perimeter();
 private:
-    int x, y;
+    int rx, ry;
     int l, w;
 
 };

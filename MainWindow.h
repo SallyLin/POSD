@@ -12,10 +12,12 @@ class MainWindow : public QMainWindow{
     Q_OBJECT
 public:
     MainWindow(Presentation* presentation);
+    ~MainWindow();
     void graphicPointChange(int del_x, int del_y);
     void setDrag(bool flag);
     void setSelectedGraphicDescription(string description);
     void setSelectedGraphic(string description);
+    void setSelectedGraphicByMousePoint(int x, int y);
 
 protected:
     QWidget *widget;
@@ -35,6 +37,8 @@ protected:
     QAction *groupAct;
     QAction *ungroupAct;
     QAction *newFileAct;
+    QAction *upperLayerAct;
+    QAction *lowerLayerAct;
     QGraphicsView *graphicsView;
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
@@ -62,6 +66,8 @@ private slots:
     void group();
     void ungroup();
     void newFile();
+    void moveUpperLayer();
+    void moveLowerLayer();
 };
 
 

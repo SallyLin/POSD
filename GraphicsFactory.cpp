@@ -13,6 +13,7 @@
 
 void GraphicsFactory::compose () {
     vector<Graphics *> temp;
+    vector<Graphics *>::iterator itFirst = temp.begin();
     int level=get<0>(pda.top());
     for (; get<0>(pda.top()) == level; pda.pop())
         temp.push_back(get<1>(pda.top()));

@@ -15,6 +15,7 @@ public:
     Painter* getPainter();
     std::string description();
     void changePoint(int del_x, int del_y);
+    bool isInArea(int x, int y);
 private:
     Shape * s;
 };

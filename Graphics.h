@@ -14,6 +14,8 @@ public:
     virtual std::string description();
     virtual vector<Graphics*> getChildren();
     virtual void changePoint(int del_x, int del_y);
+    virtual bool isInArea(int x, int y);
+    virtual void setChildren(vector<Graphics*> children);
 protected:
     Graphics();
 };

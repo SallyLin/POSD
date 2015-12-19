@@ -9,8 +9,11 @@ string Presentation::getAllDescription(){
 vector<Painter*> Presentation::getShapes(){
     vector<Painter*> painters = m->getShapes();
     for(auto p : painters){
-        if(m->isSelected(p->description()))
-            p->selected();
+        vector<string> descriptions = m->getSelctedGraphcisDescriptions();
+        p->checkSelected(descriptions);
+        //Don't remove below comment
+        /*if(m->isSelected(p->description()))
+            p->selected();*/
     }
     return painters;
 }
@@ -53,6 +56,14 @@ void Presentation::ungroup(){
         m->actUngroup();
 }
 
+void Presentation::moveUpperLayer(){
+    m->actMoveUpperLayer();
+}
+
+void Presentation::moveLowerLayer(){
+    m->actMoveLowerLayer();
+}
+
 void Presentation::omit(){
     if(!isDrag)
         m->actOmit();
@@ -91,4 +102,12 @@ void Presentation::setSelectedGraphic(string description){
 
 void Presentation::clearAll(){
     m->clearAll();
+}
+
+void Presentation::clearCmds(){
+    m->clearCmds();
+}
+
+void Presentation::setSelectedGraphicByMousePoint(int x, int y){
+    m->setSelectedGraphicByMousePoint(x, y);
 }

@@ -22,12 +22,16 @@ public:
     void group(vector<string> descriptoins);
     //void ungroup(string description);
     void ungroup();
+    void moveUpperLayer();
+    void moveLowerLayer();
     Painter* getNewGroup();
     void graphicPointChange(int del_x, int del_y);
     void setDrag(bool flag);
     //void setSelectedGraphicDescription(string description);
     void setSelectedGraphic(string description);
     void clearAll();
+    void clearCmds();
+    void setSelectedGraphicByMousePoint(int x, int y);
 
     //action status check
     bool isUndoEnable();

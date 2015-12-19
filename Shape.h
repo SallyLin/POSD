@@ -11,6 +11,7 @@ public:
     virtual std::string describe() {return std::string("");}
     virtual Painter* getPainter(){return new Painter(); }
     virtual void changePoint(int del_x, int del_y){}
+    virtual bool isInArea(int x, int y){ return false; }
 };
 
 

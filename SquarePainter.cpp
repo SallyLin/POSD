@@ -1,6 +1,7 @@
 #include "SquarePainter.h"
 #include <QPainter>
 #include <iostream>
+#include <QColor>
 
 SquarePainter::SquarePainter(qreal sx, qreal sy, qreal length, std::string description)
 :Painter(), l(length){
@@ -18,6 +19,7 @@ QRectF SquarePainter::boundingRect() const{
 }
 
 void SquarePainter::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget){
+    painter->setBrush(color);
     painter->setPen(pen);
     painter->drawRect(px, py, l, l);
     //std::cout << "(x, y) = (" << x() << ", " << y() << endl;

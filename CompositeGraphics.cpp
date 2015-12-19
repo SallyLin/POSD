@@ -65,3 +65,15 @@ void CompositeGraphics::changePoint(int del_x, int del_y){
         g->changePoint(del_x, del_y);
     }
 }
+
+bool CompositeGraphics::isInArea(int x, int y){
+    return getBoundingBox().isInArea(x, y);
+}
+
+void CompositeGraphics::setChildren(vector<Graphics*> children){
+    g_obj.clear();
+    for(auto child : children){
+        g_obj.push_back(child);
+    }
+    //this->g_obj = children;
+}

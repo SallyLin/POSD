@@ -11,6 +11,7 @@ public:
     std::string describe();
     Painter* getPainter();
     void changePoint(int del_x, int del_y);
+    bool isInArea(int x, int y);
     //int perimeter();
 private:
     int cx, cy;

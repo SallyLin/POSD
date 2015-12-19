@@ -15,6 +15,8 @@ public:
     std::string description();
     vector<Graphics*> getChildren();
     void changePoint(int del_x, int del_y);
+    bool isInArea(int x, int y);
+    void setChildren(vector<Graphics*> children);
 private:
     std::vector<Graphics *> g_obj;
 };

@@ -70,9 +70,7 @@
 		<Unit filename="AreaVisitor.cpp" />
 		<Unit filename="AreaVisitor.h" />
 		<Unit filename="Circle.cpp" />
-		<Unit filename="Circle.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="Circle.h" />
 		<Unit filename="CirclePainter.cpp" />
 		<Unit filename="CirclePainter.h" />
 		<Unit filename="Command.cpp" />
@@ -104,6 +102,10 @@
 		<Unit filename="Model.h" />
 		<Unit filename="MoveCommand.cpp" />
 		<Unit filename="MoveCommand.h" />
+		<Unit filename="MoveLowerLayerCommand.cpp" />
+		<Unit filename="MoveLowerLayerCommand.h" />
+		<Unit filename="MoveUpperLayerCommand.cpp" />
+		<Unit filename="MoveUpperLayerCommand.h" />
 		<Unit filename="Painter.cpp" />
 		<Unit filename="Painter.h" />
 		<Unit filename="Presentation.cpp" />
@@ -113,6 +115,7 @@
 		<Unit filename="RectanglePainter.cpp" />
 		<Unit filename="RectanglePainter.h" />
 		<Unit filename="Shape.h" />
+		<Unit filename="Shape0915.depend" />
 		<Unit filename="ShapeVisitor.cpp" />
 		<Unit filename="ShapeVisitor.h" />
 		<Unit filename="SimpleGraphics.cpp" />
@@ -123,10 +126,14 @@
 		<Unit filename="SquarePainter.h" />
 		<Unit filename="UngroupCommand.cpp" />
 		<Unit filename="UngroupCommand.h" />
+		<Unit filename="Visitor.h" />
 		<Unit filename="createUI.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="notes.txt" />
+		<Unit filename="utCommand.h" />
+		<Unit filename="utExtractGraphics.h" />
 		<Unit filename="utHW3.h" />
+		<Unit filename="utPDA.h" />
 		<Unit filename="util.cpp" />
 		<Unit filename="util.h" />
 		<Extensions>

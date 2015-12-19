@@ -10,8 +10,9 @@ public:
     std::string describe();
     Painter* getPainter();
     void changePoint(int del_x, int del_y);
+    bool isInArea(int x, int y);
 private:
-    int x, y;
+    int sx, sy;
     int l;
 
 };

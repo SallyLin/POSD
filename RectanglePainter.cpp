@@ -16,6 +16,9 @@ QRectF RectanglePainter::boundingRect() const{
 
 void RectanglePainter::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget){
     painter->setPen(pen);
+    if(!isComposite){
+        painter->fillRect(px, py, l, w, color);
+    }
     painter->drawRect(px, py, l, w);
 }
 
